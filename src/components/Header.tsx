@@ -7,7 +7,9 @@ const Header = (): JSX.Element => {
         <div className={styles.HeaderContainer}>
             <span className={styles.Logo}>Charlie Liu</span>
             <div className={styles.ButtonsContainer}>
-                <button>test</button>
+                <button className={styles.Button}>About</button>
+                <button className={styles.Button}>Selected Works</button>
+                <button className={styles.Button}>Contact</button>
             </div>
         </div>
     );
