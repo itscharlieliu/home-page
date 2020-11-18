@@ -1,0 +1,13 @@
+.App {
+  /* Colors Constants */
+  --primary: #fca311;
+  --secondary: #14213d;
+  --background: #000000;
+  --text: #e5e5e5;
+
+  width: 100vw;
+  height: 100vh;
+
+  color: var(--text);
+  background: var(--background);
+}

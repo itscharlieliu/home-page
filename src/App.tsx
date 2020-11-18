@@ -1,14 +1,18 @@
 import React from "react";
-import "./App.css";
 import { HashRouter } from "react-router-dom";
 
+import styles from "./App.module.css";
+import Header from "./components/Header";
 import Router from "./components/Router";
 
 const App = (): JSX.Element => {
     return (
-        <HashRouter basename={"/"}>
-            <Router />
-        </HashRouter>
+        <div className={styles.App}>
+            <Header />
+            <HashRouter basename={"/"}>
+                <Router />
+            </HashRouter>
+        </div>
     );
 };
 
