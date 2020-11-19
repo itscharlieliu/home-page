@@ -1,15 +1,28 @@
-import React from "react";
+import React, { ReactNode } from "react";
 
 import styles from "./styles/Header.module.css";
+
+interface HeaderButtonProps {
+    children?: ReactNode;
+}
+
+const HeaderButton = (props: HeaderButtonProps): JSX.Element => {
+    return (
+        <label className={styles.ButtonLabel}>
+            <button className={styles.Button}>{props.children}</button>
+            <div className={styles.ButtonUnderline} />
+        </label>
+    );
+};
 
 const Header = (): JSX.Element => {
     return (
         <div className={styles.HeaderContainer}>
             <span className={styles.Logo}>Charlie Liu</span>
             <div className={styles.ButtonsContainer}>
-                <button className={styles.Button}>About</button>
-                <button className={styles.Button}>Selected Works</button>
-                <button className={styles.Button}>Contact</button>
+                <HeaderButton>About</HeaderButton>
+                <HeaderButton>Selected Works</HeaderButton>
+                <HeaderButton>Contact</HeaderButton>
             </div>
         </div>
     );

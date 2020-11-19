@@ -19,19 +19,36 @@
     margin: 0 100px;
 }
 
+.ButtonLabel {
+    padding: 20px 50px;
+    cursor: pointer;
+}
+
+.ButtonLabel:hover .ButtonUnderline {
+    color: red;
+    width: 50px;
+}
+
 .Button {
     background: none;
     color: var(--text);
 
-    padding: 12px;
     outline: none;
     border: none;
-    border-radius: 32px;
     display: flex;
     align-items: center;
     cursor: pointer;
     width: max-content;
     font-size: 1em;
 
-    margin: 0 50px;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.ButtonUnderline {
+    position: absolute;
+    height: 5px;
+    width: 0;
+    background: var(--primary);
+    transition: width .1s;
 }
