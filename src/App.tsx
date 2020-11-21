@@ -8,8 +8,8 @@ import Router from "./components/Router";
 const App = (): JSX.Element => {
     return (
         <div className={styles.App}>
-            <Header />
             <HashRouter basename={"/"}>
+                <Header />
                 <Router />
             </HashRouter>
         </div>

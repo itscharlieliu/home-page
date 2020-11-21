@@ -24,8 +24,12 @@
     cursor: pointer;
 }
 
+.ButtonLabel--active>.ButtonUnderline {
+    width: 50px;
+}
+
+
 .ButtonLabel:hover .ButtonUnderline {
-    color: red;
     width: 50px;
 }
 
