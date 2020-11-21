@@ -20,3 +20,10 @@
 .AboutDescription {
     font-size: 1.5em;
 }
+
+.DividerBar {
+    width: 100px;
+    height: 5px;
+    margin: 20px 0;
+    background: var(--primary);
+}

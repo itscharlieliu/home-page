@@ -7,6 +7,7 @@ const AboutScreen = (): JSX.Element => {
         <div className={styles.ScreenContainer}>
             <div className={styles.AboutContainer}>
                 <span className={styles.AboutTitle}>Charlie Liu</span>
+                <div className={styles.DividerBar} />
                 <span className={styles.AboutDescription}>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
                     et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
