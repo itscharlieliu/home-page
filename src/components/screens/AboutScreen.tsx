@@ -1,22 +1,53 @@
 import React from "react";
+import styled from "styled-components";
 
-import styles from "./styles/AboutScreen.module.css";
+import { Theme } from "../../defs/defaultTheme";
+
+const ScreenContainer = styled.div`
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+`;
+
+const AboutContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    margin-left: 200px;
+    max-width: 700px;
+`;
+
+const AboutTitle = styled.span`
+    font-size: 3em;
+`;
+
+const DividerBar = styled.div`
+    width: 100px;
+    height: 5px;
+    margin: 20px 0;
+    background: ${(props: { theme: Theme }) => props.theme.primary};
+`;
+
+const AboutDescription = styled.span`
+    font-size: 1.5em;
+`;
 
 const AboutScreen = (): JSX.Element => {
     return (
-        <div className={styles.ScreenContainer}>
-            <div className={styles.AboutContainer}>
-                <span className={styles.AboutTitle}>Charlie Liu</span>
-                <div className={styles.DividerBar} />
-                <span className={styles.AboutDescription}>
+        <ScreenContainer>
+            <AboutContainer>
+                <AboutTitle>Charlie Liu</AboutTitle>
+                <DividerBar />
+                <AboutDescription>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
                     et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
                     aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
                     cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
                     culpa qui officia deserunt mollit anim id est laborum.
-                </span>
-            </div>
-        </div>
+                </AboutDescription>
+            </AboutContainer>
+        </ScreenContainer>
     );
 };
 
