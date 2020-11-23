@@ -1,5 +1,5 @@
-import React, { ReactNode } from "react";
-import { useHistory } from "react-router-dom";
+import React from "react";
+import { useHistory, useLocation } from "react-router-dom";
 import styled from "styled-components";
 
 import { Theme } from "../defs/defaultTheme";
@@ -28,7 +28,7 @@ const HeaderButtonsContainer = styled.div`
     justify-content: right;
 `;
 
-const HeaderButtonText = styled.button`
+const HeaderButtonElement = styled.button`
     background: none;
     color: ${(props: { theme: Theme }) => props.theme.text};
 
@@ -65,30 +65,43 @@ const HeaderButtonLabel = styled.label`
     }
 `;
 
-interface HeaderButtonProps {
-    children?: ReactNode;
+interface HeaderButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
     active?: boolean;
 }
 
 const HeaderButton = (props: HeaderButtonProps): JSX.Element => {
+    const { active, ...otherProps } = props;
+
     return (
         <HeaderButtonLabel>
-            <HeaderButtonText>{props.children}</HeaderButtonText>
-            <HeaderButtonUnderline active={props.active} />
+            <HeaderButtonElement {...otherProps} />
+            <HeaderButtonUnderline active={active} />
         </HeaderButtonLabel>
     );
 };
 
 const Header = (): JSX.Element => {
     const history = useHistory();
+    const location = useLocation();
+
+    console.log(history);
 
     return (
         <HeaderContainer>
             <LogoContainer>Charlie Liu</LogoContainer>
             <HeaderButtonsContainer>
-                <HeaderButton active={history.location.pathname === ABOUT}>About</HeaderButton>
-                <HeaderButton active={history.location.pathname === SELECTED_WORKS}>Selected Works</HeaderButton>
-                <HeaderButton active={history.location.pathname === CONTACT}>Contact</HeaderButton>
+                <HeaderButton active={location.pathname === ABOUT} onClick={() => history.push(ABOUT)}>
+                    About
+                </HeaderButton>
+                <HeaderButton
+                    active={location.pathname === SELECTED_WORKS}
+                    onClick={() => history.push(SELECTED_WORKS)}
+                >
+                    Selected Works
+                </HeaderButton>
+                <HeaderButton active={location.pathname === CONTACT} onClick={() => history.push(CONTACT)}>
+                    Contact
+                </HeaderButton>
             </HeaderButtonsContainer>
         </HeaderContainer>
     );
