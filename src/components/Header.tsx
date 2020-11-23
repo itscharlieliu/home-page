@@ -3,11 +3,7 @@ import { useHistory } from "react-router-dom";
 import styled from "styled-components";
 
 import { Theme } from "../defs/defaultTheme";
-
-interface HeaderButtonProps {
-    children?: ReactNode;
-    active?: boolean;
-}
+import { ABOUT, CONTACT, SELECTED_WORKS } from "../defs/routerPaths";
 
 const HeaderContainer = styled.div`
     width: 100%;
@@ -48,10 +44,14 @@ const HeaderButtonText = styled.button`
     margin: 10px 0;
 `;
 
-const HeaderButtonUnderline = styled.div`
+interface HeaderButtonUnderlineProps {
+    active?: boolean;
+}
+
+const HeaderButtonUnderline = styled.div<HeaderButtonUnderlineProps>`
     position: absolute;
     height: 5px;
-    width: 0;
+    width: ${(props: HeaderButtonUnderlineProps): number => (props.active ? 50 : 0)}px;
     background: ${(props: { theme: Theme }) => props.theme.primary};
     transition: width 0.1s;
 `;
@@ -65,11 +65,16 @@ const HeaderButtonLabel = styled.label`
     }
 `;
 
+interface HeaderButtonProps {
+    children?: ReactNode;
+    active?: boolean;
+}
+
 const HeaderButton = (props: HeaderButtonProps): JSX.Element => {
     return (
         <HeaderButtonLabel>
             <HeaderButtonText>{props.children}</HeaderButtonText>
-            <HeaderButtonUnderline />
+            <HeaderButtonUnderline active={props.active} />
         </HeaderButtonLabel>
     );
 };
@@ -77,15 +82,13 @@ const HeaderButton = (props: HeaderButtonProps): JSX.Element => {
 const Header = (): JSX.Element => {
     const history = useHistory();
 
-    console.log(history);
-
     return (
         <HeaderContainer>
             <LogoContainer>Charlie Liu</LogoContainer>
             <HeaderButtonsContainer>
-                <HeaderButton>About</HeaderButton>
-                <HeaderButton active>Selected Works</HeaderButton>
-                <HeaderButton>Contact</HeaderButton>
+                <HeaderButton active={history.location.pathname === ABOUT}>About</HeaderButton>
+                <HeaderButton active={history.location.pathname === SELECTED_WORKS}>Selected Works</HeaderButton>
+                <HeaderButton active={history.location.pathname === CONTACT}>Contact</HeaderButton>
             </HeaderButtonsContainer>
         </HeaderContainer>
     );
