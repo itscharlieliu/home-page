@@ -5,6 +5,9 @@ import styled from "styled-components";
 import { Theme } from "../defs/defaultTheme";
 import { ABOUT, CONTACT, SELECTED_WORKS } from "../defs/routerPaths";
 
+const BUTTON_UNDERLINE_WIDTH = 50;
+const BUTTON_SELECTED_UNDERLINE_WIDTH = 40;
+
 const HeaderContainer = styled.div`
     width: 100%;
     height: 50px;
@@ -51,7 +54,7 @@ interface HeaderButtonUnderlineProps {
 const HeaderButtonUnderline = styled.div<HeaderButtonUnderlineProps>`
     position: absolute;
     height: 5px;
-    width: ${(props: HeaderButtonUnderlineProps): number => (props.active ? 50 : 0)}px;
+    width: ${(props: HeaderButtonUnderlineProps): number => (props.active ? BUTTON_SELECTED_UNDERLINE_WIDTH : 0)}px;
     background: ${(props: { theme: Theme }) => props.theme.primary};
     transition: width 0.1s;
 `;
@@ -61,7 +64,7 @@ const HeaderButtonLabel = styled.label`
     cursor: pointer;
 
     &:hover ${HeaderButtonUnderline} {
-        width: 50px;
+        width: ${BUTTON_UNDERLINE_WIDTH}px;
     }
 `;
 
