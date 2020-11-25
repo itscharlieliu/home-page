@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 
 import { Theme } from "../../defs/defaultTheme";
+import PROJECT_DESCRIPTIONS from "../../defs/projectDescriptions";
 
 const BUTTON_UNDERLINE_WIDTH = 100;
 const BUTTON_SELECTED_UNDERLINE_WIDTH = 90;
@@ -89,6 +90,20 @@ enum SelectedWork {
 
 const SelectedWorksScreen = (): JSX.Element => {
     const [selectedWork, setSelectedWork] = useState<SelectedWork>(SelectedWork.none);
+
+    let description = "";
+
+    switch (selectedWork) {
+        case SelectedWork.budger: {
+            description = PROJECT_DESCRIPTIONS.budger;
+            break;
+        }
+        case SelectedWork.shortestPathFinder: {
+            description = PROJECT_DESCRIPTIONS.shortestPathFinder;
+            break;
+        }
+    }
+
     return (
         <ScreenContainer>
             <ButtonsContainer>
@@ -105,13 +120,7 @@ const SelectedWorksScreen = (): JSX.Element => {
                     Shortest Path Finder
                 </SelectedWorkButton>
             </ButtonsContainer>
-            <DescriptionContainer>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                deserunt mollit anim id est laborum.
-            </DescriptionContainer>
+            <DescriptionContainer>{description}</DescriptionContainer>
         </ScreenContainer>
     );
 };
