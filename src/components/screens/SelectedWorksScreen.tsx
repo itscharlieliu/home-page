@@ -3,18 +3,10 @@ import styled from "styled-components";
 
 import { Theme } from "../../defs/defaultTheme";
 import PROJECT_DESCRIPTIONS from "../../defs/projectDescriptions";
+import ScreenContainer from "../common/ScreenContainer";
 
 const BUTTON_UNDERLINE_WIDTH = 100;
 const BUTTON_SELECTED_UNDERLINE_WIDTH = 90;
-
-const ScreenContainer = styled.div`
-    display: flex;
-    justify-content: space-around;
-    flex-direction: row;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-`;
 
 const ButtonsContainer = styled.div`
     display: flex;
@@ -24,7 +16,10 @@ const ButtonsContainer = styled.div`
 const DescriptionContainer = styled.div`
     display: flex;
     flex-direction: column;
-    width: 40%;
+`;
+
+const DescriptionText = styled.span`
+    font-size: 1.5em;
 `;
 
 interface SelectedWorkButtonUnderlineProps {
@@ -43,7 +38,7 @@ const SelectedWorkButtonUnderline = styled.div<SelectedWorkButtonUnderlineProps>
 
 const HeaderButtonLabel = styled.label`
     position: relative;
-    padding: 20px 50px;
+    padding: 20px 0;
     cursor: pointer;
 
     &:hover ${SelectedWorkButtonUnderline} {
@@ -120,7 +115,9 @@ const SelectedWorksScreen = (): JSX.Element => {
                     Shortest Path Finder
                 </SelectedWorkButton>
             </ButtonsContainer>
-            <DescriptionContainer>{description}</DescriptionContainer>
+            <DescriptionContainer>
+                <DescriptionText>{description}</DescriptionText>
+            </DescriptionContainer>
         </ScreenContainer>
     );
 };

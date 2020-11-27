@@ -2,20 +2,11 @@ import React from "react";
 import styled from "styled-components";
 
 import { Theme } from "../../defs/defaultTheme";
-
-const ScreenContainer = styled.div`
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-`;
+import ScreenContainer from "../common/ScreenContainer";
 
 const AboutContainer = styled.div`
     display: flex;
     flex-direction: column;
-    margin-left: 200px;
-    max-width: 700px;
 `;
 
 const AboutTitle = styled.span`
