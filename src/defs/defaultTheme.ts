@@ -3,6 +3,7 @@ export interface Theme {
     secondary: string;
     background: string;
     text: string;
+    error: string;
 }
 
 const defaultTheme: Theme = {
@@ -10,6 +11,7 @@ const defaultTheme: Theme = {
     secondary: "#14213d",
     background: "#000000",
     text: "#e5e5e5",
+    error: "#ff0000",
 };
 
 export default defaultTheme;

@@ -1,6 +1,6 @@
 import React from "react";
 import { HashRouter } from "react-router-dom";
-import styled, { ThemeProvider } from "styled-components";
+import styled, { ThemeProps, ThemeProvider } from "styled-components";
 
 import Header from "./components/Header";
 import Router from "./components/Router";
@@ -13,8 +13,8 @@ const AppContainer = styled.div`
     width: 100vw;
     height: 100vh;
 
-    color: ${(props: { theme: Theme }) => props.theme.text};
-    background: ${(props: { theme: Theme }) => props.theme.background};
+    color: ${(props: ThemeProps<Theme>) => props.theme.text};
+    background: ${(props: ThemeProps<Theme>) => props.theme.background};
 `;
 
 const App = (): JSX.Element => {
