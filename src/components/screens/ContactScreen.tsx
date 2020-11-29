@@ -34,7 +34,9 @@ const ContactScreen = (): JSX.Element => {
                 <DividerBar />
             </SocialMediaContainer>
             <EmailContainer>
-                <Input label={"test"} />
+                <Input label={"Your email"} />
+                <Input label={"Subject"} />
+                <Input type={"textarea"} label={"Body"} />
             </EmailContainer>
         </ScreenContainer>
     );
