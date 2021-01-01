@@ -1,8 +1,8 @@
 import React from "react";
+import Input from "react-material-textfield";
 import styled from "styled-components";
 
 import { Theme } from "../../defs/defaultTheme";
-import Input from "../common/Input";
 import ScreenContainer from "../common/ScreenContainer";
 
 const SocialMediaContainer = styled.div`
@@ -26,6 +26,12 @@ const EmailContainer = styled.div`
     flex-direction: column;
 `;
 
+const StyledInput = styled(Input)`
+    --text: #fff;
+    --text-secondary: rgba(255, 255, 255, 0.7);
+    --text-disabled: rgba(255, 255, 255, 0.5);
+`;
+
 const ContactScreen = (): JSX.Element => {
     return (
         <ScreenContainer>
@@ -34,9 +40,9 @@ const ContactScreen = (): JSX.Element => {
                 <DividerBar />
             </SocialMediaContainer>
             <EmailContainer>
-                <Input label={"Your email"} />
-                <Input label={"Subject"} />
-                <Input type={"textarea"} label={"Body"} />
+                <StyledInput label={"Your email"} />
+                <StyledInput label={"Subject"} />
+                <StyledInput type={"textarea"} label={"Body"} />
             </EmailContainer>
         </ScreenContainer>
     );
