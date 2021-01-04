@@ -3,6 +3,7 @@ import Input from "react-material-textfield";
 import styled from "styled-components";
 
 import { Theme } from "../../defs/defaultTheme";
+import Button from "../common/Button";
 import ScreenContainer from "../common/ScreenContainer";
 
 const SocialMediaContainer = styled.div`
@@ -30,6 +31,11 @@ const StyledInput = styled(Input)`
     --text: #fff;
     --text-secondary: rgba(255, 255, 255, 0.7);
     --text-disabled: rgba(255, 255, 255, 0.5);
+    color: red;
+`;
+
+const StyledButton = styled(Button)`
+    padding-left: -32px;
 `;
 
 const ContactScreen = (): JSX.Element => {
@@ -43,6 +49,7 @@ const ContactScreen = (): JSX.Element => {
                 <StyledInput label={"Your email"} />
                 <StyledInput label={"Subject"} />
                 <StyledInput type={"textarea"} label={"Body"} />
+                <StyledButton>Send</StyledButton>
             </EmailContainer>
         </ScreenContainer>
     );
