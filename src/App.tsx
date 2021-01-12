@@ -21,6 +21,12 @@ const AppContainer = styled.div`
 const MuiTheme = createMuiTheme({
     palette: {
         type: "dark",
+        primary: {
+            main: "#fca311",
+        },
+        secondary: {
+            main: "#14213d",
+        },
     },
 });
 

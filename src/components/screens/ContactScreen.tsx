@@ -41,7 +41,7 @@ const ContactScreen = (): JSX.Element => {
             <EmailContainer>
                 <TextField label={"Your email"} />
                 <TextField label={"Subject"} />
-                <TextField multiline label={"Body"} />
+                <TextField multiline rows={10} rowsMax={10} label={"Body"} />
                 <StyledButton>Send</StyledButton>
             </EmailContainer>
         </ScreenContainer>
