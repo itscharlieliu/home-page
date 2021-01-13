@@ -1,4 +1,3 @@
-import { createMuiTheme, ThemeProvider as MuiThemeProvider } from "@material-ui/core/styles";
 import React from "react";
 import { HashRouter } from "react-router-dom";
 import styled, { ThemeProps, ThemeProvider } from "styled-components";
@@ -18,29 +17,15 @@ const AppContainer = styled.div`
     background: ${(props: ThemeProps<Theme>) => props.theme.background};
 `;
 
-const MuiTheme = createMuiTheme({
-    palette: {
-        type: "dark",
-        primary: {
-            main: "#fca311",
-        },
-        secondary: {
-            main: "#14213d",
-        },
-    },
-});
-
 const App = (): JSX.Element => {
     return (
         <ThemeProvider theme={defaultTheme}>
-            <MuiThemeProvider theme={MuiTheme}>
-                <AppContainer>
-                    <HashRouter basename={"/"}>
-                        <Header />
-                        <Router />
-                    </HashRouter>
-                </AppContainer>
-            </MuiThemeProvider>
+            <AppContainer>
+                <HashRouter basename={"/"}>
+                    <Header />
+                    <Router />
+                </HashRouter>
+            </AppContainer>
         </ThemeProvider>
     );
 };

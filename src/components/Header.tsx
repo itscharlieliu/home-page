@@ -2,7 +2,7 @@ import React from "react";
 import { useHistory, useLocation } from "react-router-dom";
 import styled from "styled-components";
 
-import { ABOUT, CONTACT, SELECTED_WORKS } from "../defs/routerPaths";
+import { ABOUT, SELECTED_WORKS } from "../defs/routerPaths";
 
 import Button from "./common/Button";
 
@@ -43,9 +43,8 @@ const Header = (): JSX.Element => {
                 <Button active={location.pathname === SELECTED_WORKS} onClick={() => history.push(SELECTED_WORKS)}>
                     Selected Works
                 </Button>
-                <Button active={location.pathname === CONTACT} onClick={() => history.push(CONTACT)}>
-                    Contact
-                </Button>
+                {/*TODO open email client*/}
+                <Button>Contact</Button>
             </HeaderButtonsContainer>
         </HeaderContainer>
     );
