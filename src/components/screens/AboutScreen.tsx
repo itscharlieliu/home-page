@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 
-import { ABOUT_DESCRIPTION } from "../../defs/about";
 import { Theme } from "../../defs/defaultTheme";
 import ScreenContainer from "../common/ScreenContainer";
 
@@ -21,8 +20,13 @@ const DividerBar = styled.div`
     background: ${(props: { theme: Theme }) => props.theme.primary};
 `;
 
-const AboutDescription = styled.span`
+const AboutDescription = styled.div`
     font-size: 1.5em;
+`;
+
+const DescriptionBlock = styled.div`
+    margin: 2em 0;
+    line-height: 1.5em;
 `;
 
 const AboutScreen = (): JSX.Element => {
@@ -31,7 +35,19 @@ const AboutScreen = (): JSX.Element => {
             <AboutContainer>
                 <AboutTitle>Charlie Liu</AboutTitle>
                 <DividerBar />
-                <AboutDescription>{ABOUT_DESCRIPTION}</AboutDescription>
+                <AboutDescription>
+                    <DescriptionBlock>
+                        I am a recent graduate of Chapman University where I received my Bachelors of Science in
+                        Computer Science. I currently work as a Software Engineer developing both front end and back end
+                        software.
+                    </DescriptionBlock>
+                    <DescriptionBlock>
+                        When I am not working and/or learning new things, I enjoy meeting new people, playing video
+                        games, and programming small personal projects on the side. I am passionate about technology and
+                        plan continually learning more about cloud computing services such as those provided by Amazon
+                        Web Services.
+                    </DescriptionBlock>
+                </AboutDescription>
             </AboutContainer>
         </ScreenContainer>
     );
