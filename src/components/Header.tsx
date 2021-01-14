@@ -1,11 +1,12 @@
 import React from "react";
+import { FiExternalLink } from "react-icons/fi";
 import { useHistory, useLocation } from "react-router-dom";
 import styled from "styled-components";
 
+import { EMAIL } from "../defs/contactInfo";
 import { ABOUT, SELECTED_WORKS } from "../defs/routerPaths";
 
 import Button from "./common/Button";
-import { EMAIL } from "../defs/contactInfo";
 
 const HeaderContainer = styled.div`
     width: 100%;
@@ -30,6 +31,10 @@ const HeaderButtonsContainer = styled.div`
     justify-content: right;
 `;
 
+const HeaderButtonIcon = styled(FiExternalLink)`
+    margin-left: 12px;
+`;
+
 const Header = (): JSX.Element => {
     const history = useHistory();
     const location = useLocation();
@@ -44,7 +49,10 @@ const Header = (): JSX.Element => {
                 <Button active={location.pathname === SELECTED_WORKS} onClick={() => history.push(SELECTED_WORKS)}>
                     Selected Works
                 </Button>
-                <Button onClick={() => window.open(EMAIL)}>Contact</Button>
+                <Button onClick={() => window.open(EMAIL)}>
+                    Contact
+                    <HeaderButtonIcon />
+                </Button>
             </HeaderButtonsContainer>
         </HeaderContainer>
     );
