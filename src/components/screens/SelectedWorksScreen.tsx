@@ -20,6 +20,7 @@ const DescriptionContainer = styled.div`
 
 const DescriptionText = styled.span`
     font-size: 1.5em;
+    line-height: 1.5em;
 `;
 
 interface SelectedWorkButtonUnderlineProps {
