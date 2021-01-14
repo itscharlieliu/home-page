@@ -19,9 +19,11 @@ const ButtonUnderline = styled.div<HeaderButtonUnderlineProps>`
 `;
 
 const ButtonLabel = styled.label`
+    position: relative;
     padding: 20px 50px;
     cursor: pointer;
     width: max-content;
+    display: inline-block;
 
     &:hover ${ButtonUnderline} {
         width: ${BUTTON_UNDERLINE_WIDTH}px;

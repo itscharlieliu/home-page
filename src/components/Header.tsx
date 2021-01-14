@@ -5,6 +5,7 @@ import styled from "styled-components";
 import { ABOUT, SELECTED_WORKS } from "../defs/routerPaths";
 
 import Button from "./common/Button";
+import { EMAIL } from "../defs/contactInfo";
 
 const HeaderContainer = styled.div`
     width: 100%;
@@ -43,8 +44,7 @@ const Header = (): JSX.Element => {
                 <Button active={location.pathname === SELECTED_WORKS} onClick={() => history.push(SELECTED_WORKS)}>
                     Selected Works
                 </Button>
-                {/*TODO open email client*/}
-                <Button>Contact</Button>
+                <Button onClick={() => window.open(EMAIL)}>Contact</Button>
             </HeaderButtonsContainer>
         </HeaderContainer>
     );
