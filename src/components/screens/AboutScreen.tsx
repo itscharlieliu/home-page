@@ -20,8 +20,20 @@ const DividerBar = styled.div`
     background: ${(props: { theme: Theme }) => props.theme.primary};
 `;
 
-const AboutDescription = styled.div`
+interface AboutDescriptionProps {
+    mounted?: boolean;
+}
+
+const AboutDescription = styled.div<AboutDescriptionProps>`
     font-size: 1.5em;
+    opacity: 0;
+    animation: anim 2s forwards;
+
+    @keyframes anim {
+        100% {
+            opacity: 100%;
+        }
+    }
 `;
 
 const DescriptionBlock = styled.div`
