@@ -13,6 +13,8 @@ const AppContainer = styled.div`
     width: 100vw;
     height: 100vh;
 
+    overflow: hidden;
+
     color: ${(props: ThemeProps<Theme>) => props.theme.text};
     background: ${(props: ThemeProps<Theme>) => props.theme.background};
 `;

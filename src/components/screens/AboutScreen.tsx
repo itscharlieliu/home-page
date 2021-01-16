@@ -7,6 +7,14 @@ import ScreenContainer from "../common/ScreenContainer";
 const AboutContainer = styled.div`
     display: flex;
     flex-direction: column;
+
+    transform: translateX(100vw);
+    animation: anim 1s forwards;
+    @keyframes anim {
+        100% {
+            transform: translateX(0);
+        }
+    }
 `;
 
 const AboutTitle = styled.span`
@@ -26,14 +34,6 @@ interface AboutDescriptionProps {
 
 const AboutDescription = styled.div<AboutDescriptionProps>`
     font-size: 1.5em;
-    opacity: 0;
-    animation: anim 2s forwards;
-
-    @keyframes anim {
-        100% {
-            opacity: 100%;
-        }
-    }
 `;
 
 const DescriptionBlock = styled.div`
