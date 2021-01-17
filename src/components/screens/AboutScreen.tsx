@@ -8,13 +8,7 @@ const AboutContainer = styled.div`
     display: flex;
     flex-direction: column;
 
-    transform: translateX(100vw);
-    animation: anim 1s forwards;
-    @keyframes anim {
-        100% {
-            transform: translateX(0);
-        }
-    }
+
 `;
 
 const AboutTitle = styled.span`

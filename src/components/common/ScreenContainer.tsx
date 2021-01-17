@@ -8,6 +8,14 @@ const ScreenContainer = styled.div`
     height: 100%;
     margin-left: auto;
     margin-right: auto;
+    
+    transform: translateX(-100vw);
+    animation: anim 1s forwards;
+    @keyframes anim {
+        100% {
+            transform: translateX(0);
+        }
+    }
 `;
 
 export default ScreenContainer;
