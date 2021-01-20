@@ -7,8 +7,6 @@ import ScreenContainer from "../common/ScreenContainer";
 const AboutContainer = styled.div`
     display: flex;
     flex-direction: column;
-
-
 `;
 
 const AboutTitle = styled.span`
