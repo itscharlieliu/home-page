@@ -1,4 +1,5 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
 import styled from "styled-components";
 
 import { Theme } from "../../defs/defaultTheme";
@@ -34,6 +35,10 @@ const DescriptionBlock = styled.div`
 `;
 
 const AboutScreen = (): JSX.Element => {
+    const history = useHistory();
+
+    console.log(history);
+
     return (
         <ScreenContainer>
             <AboutContainer>
