@@ -40,7 +40,7 @@ const AboutScreen = (): JSX.Element => {
     console.log(history);
 
     return (
-        <ScreenContainer>
+        <ScreenContainer start={-100}>
             <AboutContainer>
                 <AboutTitle>Charlie Liu</AboutTitle>
                 <DividerBar />

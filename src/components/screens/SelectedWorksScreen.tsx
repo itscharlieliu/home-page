@@ -101,7 +101,7 @@ const SelectedWorksScreen = (): JSX.Element => {
     }
 
     return (
-        <ScreenContainer>
+        <ScreenContainer start={100}>
             <ButtonsContainer>
                 <SelectedWorkButton
                     active={selectedWork === SelectedWork.budger}
