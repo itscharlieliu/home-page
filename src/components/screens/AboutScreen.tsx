@@ -4,6 +4,7 @@ import styled from "styled-components";
 
 import { Theme } from "../../defs/defaultTheme";
 import ScreenContainer from "../common/ScreenContainer";
+import SlidingContainer from "../common/SlidingContainer";
 
 const AboutContainer = styled.div`
     display: flex;
@@ -29,7 +30,7 @@ const AboutDescription = styled.div<AboutDescriptionProps>`
     font-size: 1.5em;
 `;
 
-const DescriptionBlock = styled.div`
+const DescriptionBlock = styled(SlidingContainer)`
     margin: 2em 0;
     line-height: 1.5em;
 `;
@@ -40,17 +41,17 @@ const AboutScreen = (): JSX.Element => {
     console.log(history);
 
     return (
-        <ScreenContainer start={-100}>
+        <ScreenContainer>
             <AboutContainer>
                 <AboutTitle>Charlie Liu</AboutTitle>
                 <DividerBar />
                 <AboutDescription>
-                    <DescriptionBlock>
+                    <DescriptionBlock start={100}>
                         I am a recent graduate of Chapman University where I received my Bachelors of Science in
                         Computer Science. I currently work as a Software Engineer developing both front end and back end
                         software.
                     </DescriptionBlock>
-                    <DescriptionBlock>
+                    <DescriptionBlock start={-100}>
                         When I am not working and/or learning new things, I enjoy meeting new people, playing video
                         games, and programming small personal projects on the side. I am passionate about technology and
                         plan continually learning more about cloud computing services such as those provided by Amazon

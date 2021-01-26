@@ -4,11 +4,12 @@ import styled from "styled-components";
 import { Theme } from "../../defs/defaultTheme";
 import PROJECT_DESCRIPTIONS from "../../defs/projectDescriptions";
 import ScreenContainer from "../common/ScreenContainer";
+import SlidingContainer from "../common/SlidingContainer";
 
 const BUTTON_UNDERLINE_WIDTH = 100;
 const BUTTON_SELECTED_UNDERLINE_WIDTH = 90;
 
-const ButtonsContainer = styled.div`
+const ButtonsContainer = styled(SlidingContainer)`
     display: flex;
     flex-direction: column;
 `;
@@ -101,8 +102,8 @@ const SelectedWorksScreen = (): JSX.Element => {
     }
 
     return (
-        <ScreenContainer start={100}>
-            <ButtonsContainer>
+        <ScreenContainer>
+            <ButtonsContainer start={100}>
                 <SelectedWorkButton
                     active={selectedWork === SelectedWork.budger}
                     onClick={() => setSelectedWork(SelectedWork.budger)}

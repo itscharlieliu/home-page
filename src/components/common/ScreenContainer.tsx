@@ -1,10 +1,6 @@
 import styled from "styled-components";
 
-interface ScreenContainerProps {
-    start: number;
-}
-
-const ScreenContainer = styled.div<ScreenContainerProps>`
+const ScreenContainer = styled.div`
     display: grid;
     grid-template-columns: 50% 50%;
     align-items: center;
@@ -12,14 +8,6 @@ const ScreenContainer = styled.div<ScreenContainerProps>`
     height: 100%;
     margin-left: auto;
     margin-right: auto;
-
-    transform: translateX(${(props: ScreenContainerProps) => props.start}vw);
-    animation: anim 1s forwards;
-    @keyframes anim {
-        100% {
-            transform: translateX(0);
-        }
-    }
 `;
 
 export default ScreenContainer;
