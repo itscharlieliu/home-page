@@ -8,13 +8,13 @@ const BackgroundContainer = styled.div`
     top: 0;
     bottom: 0;
 
-    z-index: -1;
+    z-index: -100;
 
     background: grey;
 `;
 
-const Background = (): JSX.Element => {
-    return <BackgroundContainer>test</BackgroundContainer>;
+const Background = (props: React.HTMLAttributes<HTMLDivElement>): JSX.Element => {
+    return <BackgroundContainer {...props} />;
 };
 
 export default Background;

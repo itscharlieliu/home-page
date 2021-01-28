@@ -105,7 +105,7 @@ const SelectedWorksScreen = (): JSX.Element => {
         <ScreenContainer>
             <Background />
             <ButtonsContainer>
-                <SlidingContainer start={-50} duration={0.85} delay={0}>
+                <SlidingContainer startX={-screen.width / 2} startY={0} duration={0.85} delay={0}>
                     <SelectedWorkButton
                         active={selectedWork === SelectedWork.budger}
                         onClick={() => setSelectedWork(SelectedWork.budger)}
@@ -113,7 +113,7 @@ const SelectedWorksScreen = (): JSX.Element => {
                         Budger
                     </SelectedWorkButton>
                 </SlidingContainer>
-                <SlidingContainer start={-50} duration={0.85} delay={0.2}>
+                <SlidingContainer startX={-screen.width / 2} startY={0} duration={0.85} delay={0.2}>
                     <SelectedWorkButton
                         active={selectedWork === SelectedWork.shortestPathFinder}
                         onClick={() => setSelectedWork(SelectedWork.shortestPathFinder)}

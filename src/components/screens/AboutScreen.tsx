@@ -5,7 +5,7 @@ import { Theme } from "../../defs/defaultTheme";
 import ScreenContainer from "../common/ScreenContainer";
 import SlidingContainer from "../common/SlidingContainer";
 import Background from "../common/background";
-import { HashRouter } from "react-router-dom";
+import { ReactComponent as BackgroundLineMed } from "../../resources/images/backgroundLineMed.svg";
 
 const AboutContainer = styled.div`
     display: flex;
@@ -36,23 +36,35 @@ const DescriptionBlock = styled(SlidingContainer)`
     line-height: 1.5em;
 `;
 
+const BackgroundLine = styled(BackgroundLineMed)`
+    position: absolute;
+    left: 25%;
+    top: 25%;
+    transform: scale(50%);
+    fill: blue;
+`;
+
 const AboutScreen = (): JSX.Element => {
     return (
         <ScreenContainer>
-            <Background />
+            <Background>
+                <SlidingContainer startX={1000} startY={-1000} duration={0.85} delay={1}>
+                    <BackgroundLine />
+                </SlidingContainer>
+            </Background>
 
             <AboutContainer>
-                <SlidingContainer start={-50} duration={0.85} delay={0}>
+                <SlidingContainer startX={-screen.width / 2} startY={0} duration={0.85} delay={0}>
                     <AboutTitle>Charlie Liu</AboutTitle>
                     <DividerBar />
                 </SlidingContainer>
                 <AboutDescription>
-                    <DescriptionBlock start={-50} duration={0.85} delay={0.2}>
+                    <DescriptionBlock startX={-screen.width / 2} startY={0} duration={0.85} delay={0.2}>
                         I am a recent graduate of Chapman University where I received my Bachelors of Science in
                         Computer Science. I currently work as a Software Engineer developing both front end and back end
                         software.
                     </DescriptionBlock>
-                    <DescriptionBlock start={-50} duration={0.85} delay={0.4}>
+                    <DescriptionBlock startX={-screen.width / 2} startY={0} duration={0.85} delay={0.4}>
                         When I am not working and/or learning new things, I enjoy meeting new people, playing video
                         games, and programming small personal projects on the side. I am passionate about technology and
                         plan continually learning more about cloud computing services such as those provided by Amazon
