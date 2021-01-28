@@ -6,6 +6,10 @@ export interface Theme {
     error: string;
 }
 
+export interface WithTheme {
+    theme: Theme;
+}
+
 const defaultTheme: Theme = {
     primary: "#fca311",
     secondary: "#14213d",

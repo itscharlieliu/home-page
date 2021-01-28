@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 
-import { Theme } from "../../defs/defaultTheme";
+import { WithTheme } from "../../defs/defaultTheme";
+import BackgroundLine from "../common/BackgroundLine";
 import ScreenContainer from "../common/ScreenContainer";
 import SlidingContainer from "../common/SlidingContainer";
 import Background from "../common/background";
-import { ReactComponent as BackgroundLineMed } from "../../resources/images/backgroundLineMed.svg";
 
 const AboutContainer = styled.div`
     display: flex;
@@ -20,7 +20,7 @@ const DividerBar = styled.div`
     width: 100px;
     height: 5px;
     margin: 20px 0;
-    background: ${(props: { theme: Theme }) => props.theme.primary};
+    background: ${(props: WithTheme) => props.theme.primary};
 `;
 
 interface AboutDescriptionProps {
@@ -36,20 +36,12 @@ const DescriptionBlock = styled(SlidingContainer)`
     line-height: 1.5em;
 `;
 
-const BackgroundLine = styled(BackgroundLineMed)`
-    position: absolute;
-    left: 25%;
-    top: 25%;
-    transform: scale(50%);
-    fill: blue;
-`;
-
 const AboutScreen = (): JSX.Element => {
     return (
         <ScreenContainer>
             <Background>
                 <SlidingContainer startX={1000} startY={-1000} duration={0.85} delay={1}>
-                    <BackgroundLine />
+                    <BackgroundLine x={25} y={25} scale={50} />
                 </SlidingContainer>
             </Background>
 

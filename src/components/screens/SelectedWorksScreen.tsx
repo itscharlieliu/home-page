@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 
-import { Theme } from "../../defs/defaultTheme";
+import { Theme, WithTheme } from "../../defs/defaultTheme";
 import PROJECT_DESCRIPTIONS from "../../defs/projectDescriptions";
 import ScreenContainer from "../common/ScreenContainer";
 import SlidingContainer from "../common/SlidingContainer";
@@ -34,7 +34,7 @@ const SelectedWorkButtonUnderline = styled.div<SelectedWorkButtonUnderlineProps>
     height: 5px;
     width: ${(props: SelectedWorkButtonUnderlineProps): number =>
         props.active ? BUTTON_SELECTED_UNDERLINE_WIDTH : 0}px;
-    background: ${(props: { theme: Theme }) => props.theme.primary};
+    background: ${(props: WithTheme) => props.theme.primary};
     transition: width 0.1s;
 `;
 
@@ -50,7 +50,7 @@ const HeaderButtonLabel = styled.label`
 
 const SelectedWorkButtonElement = styled.button`
     background: none;
-    color: ${(props: { theme: Theme }) => props.theme.text};
+    color: ${(props: WithTheme) => props.theme.text};
 
     outline: none;
     border: none;

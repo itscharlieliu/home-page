@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Theme, WithTheme } from "../../defs/defaultTheme";
 
 const BackgroundContainer = styled.div`
     position: absolute;
@@ -10,7 +11,7 @@ const BackgroundContainer = styled.div`
 
     z-index: -100;
 
-    background: grey;
+    background: ${(props: WithTheme) => props.theme.background};
 `;
 
 const Background = (props: React.HTMLAttributes<HTMLDivElement>): JSX.Element => {
