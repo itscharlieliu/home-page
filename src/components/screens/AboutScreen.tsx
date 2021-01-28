@@ -4,6 +4,8 @@ import styled from "styled-components";
 import { Theme } from "../../defs/defaultTheme";
 import ScreenContainer from "../common/ScreenContainer";
 import SlidingContainer from "../common/SlidingContainer";
+import Background from "../common/background";
+import { HashRouter } from "react-router-dom";
 
 const AboutContainer = styled.div`
     display: flex;
@@ -37,6 +39,8 @@ const DescriptionBlock = styled(SlidingContainer)`
 const AboutScreen = (): JSX.Element => {
     return (
         <ScreenContainer>
+            <Background />
+
             <AboutContainer>
                 <SlidingContainer start={-50} duration={0.85} delay={0}>
                     <AboutTitle>Charlie Liu</AboutTitle>

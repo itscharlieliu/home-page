@@ -5,6 +5,7 @@ import { Theme } from "../../defs/defaultTheme";
 import PROJECT_DESCRIPTIONS from "../../defs/projectDescriptions";
 import ScreenContainer from "../common/ScreenContainer";
 import SlidingContainer from "../common/SlidingContainer";
+import Background from "../common/background";
 
 const BUTTON_UNDERLINE_WIDTH = 100;
 const BUTTON_SELECTED_UNDERLINE_WIDTH = 90;
@@ -102,6 +103,7 @@ const SelectedWorksScreen = (): JSX.Element => {
 
     return (
         <ScreenContainer>
+            <Background />
             <ButtonsContainer>
                 <SlidingContainer start={-50} duration={0.85} delay={0}>
                     <SelectedWorkButton

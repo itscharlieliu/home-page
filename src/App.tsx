@@ -16,7 +16,6 @@ const AppContainer = styled.div`
     overflow: hidden;
 
     color: ${(props: ThemeProps<Theme>) => props.theme.text};
-    background: ${(props: ThemeProps<Theme>) => props.theme.background};
 `;
 
 const App = (): JSX.Element => {
