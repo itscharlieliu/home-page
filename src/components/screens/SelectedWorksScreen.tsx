@@ -9,7 +9,7 @@ import SlidingContainer from "../common/SlidingContainer";
 const BUTTON_UNDERLINE_WIDTH = 100;
 const BUTTON_SELECTED_UNDERLINE_WIDTH = 90;
 
-const ButtonsContainer = styled(SlidingContainer)`
+const ButtonsContainer = styled.div`
     display: flex;
     flex-direction: column;
 `;
@@ -30,7 +30,6 @@ interface SelectedWorkButtonUnderlineProps {
 
 const SelectedWorkButtonUnderline = styled.div<SelectedWorkButtonUnderlineProps>`
     position: absolute;
-    bottom: 10px;
     height: 5px;
     width: ${(props: SelectedWorkButtonUnderlineProps): number =>
         props.active ? BUTTON_SELECTED_UNDERLINE_WIDTH : 0}px;
@@ -103,19 +102,23 @@ const SelectedWorksScreen = (): JSX.Element => {
 
     return (
         <ScreenContainer>
-            <ButtonsContainer start={100} duration={1} delay={0}>
-                <SelectedWorkButton
-                    active={selectedWork === SelectedWork.budger}
-                    onClick={() => setSelectedWork(SelectedWork.budger)}
-                >
-                    Budger
-                </SelectedWorkButton>
-                <SelectedWorkButton
-                    active={selectedWork === SelectedWork.shortestPathFinder}
-                    onClick={() => setSelectedWork(SelectedWork.shortestPathFinder)}
-                >
-                    Shortest Path Finder
-                </SelectedWorkButton>
+            <ButtonsContainer>
+                <SlidingContainer start={-50} duration={0.85} delay={0}>
+                    <SelectedWorkButton
+                        active={selectedWork === SelectedWork.budger}
+                        onClick={() => setSelectedWork(SelectedWork.budger)}
+                    >
+                        Budger
+                    </SelectedWorkButton>
+                </SlidingContainer>
+                <SlidingContainer start={-50} duration={0.85} delay={0.2}>
+                    <SelectedWorkButton
+                        active={selectedWork === SelectedWork.shortestPathFinder}
+                        onClick={() => setSelectedWork(SelectedWork.shortestPathFinder)}
+                    >
+                        Shortest Path Finder
+                    </SelectedWorkButton>
+                </SlidingContainer>
             </ButtonsContainer>
             <DescriptionContainer>
                 <DescriptionText>{description}</DescriptionText>
