@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import { Theme, WithTheme } from "../../defs/defaultTheme";
+import { WithTheme } from "../../defs/defaultTheme";
 
 const BUTTON_UNDERLINE_WIDTH = 50;
 const BUTTON_SELECTED_UNDERLINE_WIDTH = 40;

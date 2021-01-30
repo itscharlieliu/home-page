@@ -40,8 +40,17 @@ const AboutScreen = (): JSX.Element => {
     return (
         <ScreenContainer>
             <Background>
-                <SlidingContainer startX={1000} startY={-1000} duration={0.85} delay={1}>
+                <SlidingContainer startX={1000} startY={-1000} duration={0.85} delay={0}>
                     <BackgroundLine x={25} y={25} scale={50} />
+                </SlidingContainer>
+                <SlidingContainer startX={1000} startY={-1000} duration={0.85} delay={0.2}>
+                    <BackgroundLine x={15} y={0} scale={26} />
+                </SlidingContainer>
+                <SlidingContainer startX={-1000} startY={1000} duration={0.85} delay={0.2}>
+                    <BackgroundLine x={20} y={15} scale={100} />
+                </SlidingContainer>
+                <SlidingContainer startX={1000} startY={-1000} duration={0.85} delay={0}>
+                    <BackgroundLine x={10} y={10} scale={15} color={"primary"} />
                 </SlidingContainer>
             </Background>
 
