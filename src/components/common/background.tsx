@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { Theme, WithTheme } from "../../defs/defaultTheme";
+
+import { WithTheme } from "../../defs/defaultTheme";
 
 const BackgroundContainer = styled.div`
     position: absolute;
