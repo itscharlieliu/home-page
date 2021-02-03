@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 
-import { Theme, WithTheme } from "../../defs/defaultTheme";
+import { WithTheme } from "../../defs/defaultTheme";
 import PROJECT_DESCRIPTIONS from "../../defs/projectDescriptions";
 import ScreenContainer from "../common/ScreenContainer";
 import SlidingContainer from "../common/SlidingContainer";

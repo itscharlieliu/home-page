@@ -41,16 +41,25 @@ const AboutScreen = (): JSX.Element => {
         <ScreenContainer>
             <Background>
                 <SlidingContainer startX={1000} startY={-1000} duration={0.85} delay={0}>
-                    <BackgroundLine x={25} y={25} scale={50} />
+                    <BackgroundLine x={325} y={25} scale={50} />
                 </SlidingContainer>
                 <SlidingContainer startX={1000} startY={-1000} duration={0.85} delay={0.2}>
-                    <BackgroundLine x={250} y={0} scale={26} />
+                    <BackgroundLine x={550} y={0} scale={26} />
                 </SlidingContainer>
                 <SlidingContainer startX={-1000} startY={1000} duration={0.85} delay={0.2}>
-                    <BackgroundLine x={150} y={15} scale={100} />
+                    <BackgroundLine x={450} y={15} scale={100} />
                 </SlidingContainer>
                 <SlidingContainer startX={1000} startY={-1000} duration={0.85} delay={0}>
-                    <BackgroundLine x={360} y={10} scale={15} color={"primary"} />
+                    <BackgroundLine x={660} y={0} scale={15} color={"primary"} variant={"short"} />
+                </SlidingContainer>
+                <SlidingContainer startX={1000} startY={-1000} duration={0.85} delay={0}>
+                    <BackgroundLine x={125} y={600} scale={50} />
+                </SlidingContainer>
+                <SlidingContainer startX={-1000} startY={1000} duration={0.85} delay={0}>
+                    <BackgroundLine x={600} y={200} scale={75} variant={"long"} />
+                </SlidingContainer>
+                <SlidingContainer startX={1000} startY={-1000} duration={0.85} delay={0.2}>
+                    <BackgroundLine x={1100} y={600} scale={15} color={"primary"} variant={"short"} />
                 </SlidingContainer>
             </Background>
 
