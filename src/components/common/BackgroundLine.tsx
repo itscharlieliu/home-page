@@ -35,8 +35,8 @@ const BackgroundLine = styled(
     },
 )<BackgroundLineProps>`
     position: absolute;
-    left: ${(props: BackgroundLineProps) => props.x}px;
-    top: ${(props: BackgroundLineProps) => props.y}px;
+    left: ${(props: BackgroundLineProps) => props.x}vw;
+    top: ${(props: BackgroundLineProps) => props.y}vh;
     transform: scale(${(props: BackgroundLineProps) => props.scale}%);
     fill: ${(props: BackgroundLineProps & WithTheme) =>
         props.color ? props.theme[props.color] : props.theme.secondary};

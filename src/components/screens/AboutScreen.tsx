@@ -41,25 +41,25 @@ const AboutScreen = (): JSX.Element => {
         <ScreenContainer>
             <Background>
                 <SlidingContainer startX={1000} startY={-1000} duration={0.85} delay={0}>
-                    <BackgroundLine x={325} y={25} scale={50} />
+                    <BackgroundLine x={10} y={0} scale={50} />
                 </SlidingContainer>
                 <SlidingContainer startX={1000} startY={-1000} duration={0.85} delay={0.2}>
-                    <BackgroundLine x={550} y={0} scale={26} />
+                    <BackgroundLine x={30} y={0} scale={26} />
                 </SlidingContainer>
                 <SlidingContainer startX={-1000} startY={1000} duration={0.85} delay={0.2}>
-                    <BackgroundLine x={450} y={15} scale={100} />
+                    <BackgroundLine x={50} y={15} scale={100} />
                 </SlidingContainer>
                 <SlidingContainer startX={1000} startY={-1000} duration={0.85} delay={0}>
-                    <BackgroundLine x={660} y={0} scale={15} color={"primary"} variant={"short"} />
+                    <BackgroundLine x={60} y={0} scale={15} color={"primary"} variant={"short"} />
                 </SlidingContainer>
                 <SlidingContainer startX={1000} startY={-1000} duration={0.85} delay={0}>
-                    <BackgroundLine x={125} y={600} scale={50} />
+                    <BackgroundLine x={15} y={60} scale={50} />
                 </SlidingContainer>
                 <SlidingContainer startX={-1000} startY={1000} duration={0.85} delay={0}>
-                    <BackgroundLine x={600} y={200} scale={75} variant={"long"} />
+                    <BackgroundLine x={80} y={70} scale={75} variant={"long"} />
                 </SlidingContainer>
                 <SlidingContainer startX={1000} startY={-1000} duration={0.85} delay={0.2}>
-                    <BackgroundLine x={1100} y={600} scale={15} color={"primary"} variant={"short"} />
+                    <BackgroundLine x={30} y={80} scale={15} color={"primary"} variant={"short"} />
                 </SlidingContainer>
             </Background>
 
