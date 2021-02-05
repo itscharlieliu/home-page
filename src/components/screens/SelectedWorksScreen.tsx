@@ -6,6 +6,7 @@ import PROJECT_DESCRIPTIONS from "../../defs/projectDescriptions";
 import ScreenContainer from "../common/ScreenContainer";
 import SlidingContainer from "../common/SlidingContainer";
 import Background from "../common/background";
+import BackgroundLine from "../common/BackgroundLine";
 
 const BUTTON_UNDERLINE_WIDTH = 100;
 const BUTTON_SELECTED_UNDERLINE_WIDTH = 90;
@@ -103,7 +104,29 @@ const SelectedWorksScreen = (): JSX.Element => {
 
     return (
         <ScreenContainer>
-            <Background />
+            <Background>
+                <SlidingContainer startX={1000} startY={-1000} duration={0.85} delay={0}>
+                    <BackgroundLine x={10} y={0} scale={50} />
+                </SlidingContainer>
+                <SlidingContainer startX={1000} startY={-1000} duration={0.85} delay={0.2}>
+                    <BackgroundLine x={30} y={0} scale={26} />
+                </SlidingContainer>
+                <SlidingContainer startX={-1000} startY={1000} duration={0.85} delay={0.2}>
+                    <BackgroundLine x={50} y={15} scale={100} />
+                </SlidingContainer>
+                <SlidingContainer startX={1000} startY={-1000} duration={0.85} delay={0}>
+                    <BackgroundLine x={60} y={0} scale={15} color={"primary"} variant={"short"} />
+                </SlidingContainer>
+                <SlidingContainer startX={1000} startY={-1000} duration={0.85} delay={0}>
+                    <BackgroundLine x={15} y={60} scale={50} />
+                </SlidingContainer>
+                <SlidingContainer startX={-1000} startY={1000} duration={0.85} delay={0}>
+                    <BackgroundLine x={80} y={70} scale={75} variant={"long"} />
+                </SlidingContainer>
+                <SlidingContainer startX={1000} startY={-1000} duration={0.85} delay={0.2}>
+                    <BackgroundLine x={30} y={80} scale={15} color={"primary"} variant={"short"} />
+                </SlidingContainer>
+            </Background>
             <ButtonsContainer>
                 <SlidingContainer startX={-screen.width / 2} startY={0} duration={0.85} delay={0}>
                     <SelectedWorkButton
