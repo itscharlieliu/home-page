@@ -22,7 +22,7 @@ const DescriptionContainer = styled.div`
 `;
 
 const DescriptionText = styled.span`
-    font-size: 1.5em;
+    font-size: 1.25em;
     line-height: 1.5em;
 `;
 
@@ -86,21 +86,26 @@ enum SelectedWork {
     shortestPathFinder,
 }
 
-const SelectedWorksScreen = (): JSX.Element => {
-    const [selectedWork, setSelectedWork] = useState<SelectedWork>(SelectedWork.none);
+interface DescriptionProps {
+    selectedWork: SelectedWork;
+}
 
-    let description = "";
-
-    switch (selectedWork) {
+const Description = (props: DescriptionProps): JSX.Element | null => {
+    switch (props.selectedWork) {
         case SelectedWork.budger: {
-            description = PROJECT_DESCRIPTIONS.budger;
-            break;
+            return <DescriptionText>{PROJECT_DESCRIPTIONS.budger}</DescriptionText>;
         }
         case SelectedWork.shortestPathFinder: {
-            description = PROJECT_DESCRIPTIONS.shortestPathFinder;
-            break;
+            return <DescriptionText>{PROJECT_DESCRIPTIONS.shortestPathFinder}</DescriptionText>;
+        }
+        default: {
+            return null;
         }
     }
+};
+
+const SelectedWorksScreen = (): JSX.Element => {
+    const [selectedWork, setSelectedWork] = useState<SelectedWork>(SelectedWork.none);
 
     return (
         <ScreenContainer>
@@ -146,7 +151,9 @@ const SelectedWorksScreen = (): JSX.Element => {
                 </SlidingContainer>
             </ButtonsContainer>
             <DescriptionContainer>
-                <DescriptionText>{description}</DescriptionText>
+                <DescriptionText>
+                    <Description selectedWork={selectedWork} />
+                </DescriptionText>
             </DescriptionContainer>
         </ScreenContainer>
     );
