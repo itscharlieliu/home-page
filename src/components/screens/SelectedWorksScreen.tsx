@@ -7,6 +7,7 @@ import ScreenContainer from "../common/ScreenContainer";
 import SlidingContainer from "../common/SlidingContainer";
 import Background from "../common/background";
 import BackgroundLine from "../common/BackgroundLine";
+import Button from "../common/Button";
 
 const BUTTON_UNDERLINE_WIDTH = 100;
 const BUTTON_SELECTED_UNDERLINE_WIDTH = 90;
@@ -93,7 +94,12 @@ interface DescriptionProps {
 const Description = (props: DescriptionProps): JSX.Element | null => {
     switch (props.selectedWork) {
         case SelectedWork.budger: {
-            return <DescriptionText>{PROJECT_DESCRIPTIONS.budger}</DescriptionText>;
+            return (
+                <>
+                    <DescriptionText>{PROJECT_DESCRIPTIONS.budger}</DescriptionText>
+                    <Button>Test</Button>
+                </>
+            );
         }
         case SelectedWork.shortestPathFinder: {
             return <DescriptionText>{PROJECT_DESCRIPTIONS.shortestPathFinder}</DescriptionText>;
@@ -151,9 +157,7 @@ const SelectedWorksScreen = (): JSX.Element => {
                 </SlidingContainer>
             </ButtonsContainer>
             <DescriptionContainer>
-                <DescriptionText>
-                    <Description selectedWork={selectedWork} />
-                </DescriptionText>
+                <Description selectedWork={selectedWork} />
             </DescriptionContainer>
         </ScreenContainer>
     );

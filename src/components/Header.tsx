@@ -30,6 +30,10 @@ const HeaderButtonsContainer = styled.div`
     justify-content: right;
 `;
 
+const HeaderButton = styled(Button)`
+    margin: 20px 50px;
+`;
+
 const HeaderButtonIcon = styled(FiExternalLink)`
     margin-left: 12px;
 `;
@@ -42,16 +46,19 @@ const Header = (): JSX.Element => {
         <HeaderContainer>
             <LogoContainer>Charlie Liu</LogoContainer>
             <HeaderButtonsContainer>
-                <Button active={location.pathname === ABOUT} onClick={() => history.push(ABOUT)}>
+                <HeaderButton active={location.pathname === ABOUT} onClick={() => history.push(ABOUT)}>
                     About
-                </Button>
-                <Button active={location.pathname === SELECTED_WORKS} onClick={() => history.push(SELECTED_WORKS)}>
+                </HeaderButton>
+                <HeaderButton
+                    active={location.pathname === SELECTED_WORKS}
+                    onClick={() => history.push(SELECTED_WORKS)}
+                >
                     Selected Works
-                </Button>
-                <Button onClick={() => window.open(EMAIL)}>
+                </HeaderButton>
+                <HeaderButton onClick={() => window.open(EMAIL)}>
                     Contact
                     <HeaderButtonIcon />
-                </Button>
+                </HeaderButton>
             </HeaderButtonsContainer>
         </HeaderContainer>
     );

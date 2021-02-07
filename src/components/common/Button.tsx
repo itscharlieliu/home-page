@@ -20,7 +20,6 @@ const ButtonUnderline = styled.div<HeaderButtonUnderlineProps>`
 
 const ButtonLabel = styled.label`
     position: relative;
-    padding: 20px 50px;
     cursor: pointer;
     width: max-content;
     display: inline-block;
@@ -51,10 +50,10 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
 }
 
 const Button = (props: ButtonProps): JSX.Element => {
-    const { active, ...otherProps } = props;
+    const { active, className, ...otherProps } = props;
 
     return (
-        <ButtonLabel>
+        <ButtonLabel className={className}>
             <ButtonElement {...otherProps} />
             <ButtonUnderline active={active} />
         </ButtonLabel>
