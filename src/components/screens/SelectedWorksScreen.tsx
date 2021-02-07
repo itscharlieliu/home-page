@@ -1,13 +1,16 @@
 import React, { useState } from "react";
+import { FiExternalLink } from "react-icons/fi";
 import styled from "styled-components";
 
 import { WithTheme } from "../../defs/defaultTheme";
+import { BUDGER_DEMO, BUDGER_SOURCE } from "../../defs/externalLinks";
 import PROJECT_DESCRIPTIONS from "../../defs/projectDescriptions";
+import openInNewTab from "../../utils/openInNewTab";
+import BackgroundLine from "../common/BackgroundLine";
+import Button from "../common/Button";
 import ScreenContainer from "../common/ScreenContainer";
 import SlidingContainer from "../common/SlidingContainer";
 import Background from "../common/background";
-import BackgroundLine from "../common/BackgroundLine";
-import Button from "../common/Button";
 
 const BUTTON_UNDERLINE_WIDTH = 100;
 const BUTTON_SELECTED_UNDERLINE_WIDTH = 90;
@@ -25,6 +28,7 @@ const DescriptionContainer = styled.div`
 const DescriptionText = styled.span`
     font-size: 1.25em;
     line-height: 1.5em;
+    margin-bottom: 10px;
 `;
 
 interface SelectedWorkButtonUnderlineProps {
@@ -66,6 +70,10 @@ const SelectedWorkButtonElement = styled.button`
     margin: 10px 0;
 `;
 
+const ButtonIcon = styled(FiExternalLink)`
+    margin-left: 12px;
+`;
+
 interface SelectedWorkButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
     active?: boolean;
 }
@@ -97,7 +105,12 @@ const Description = (props: DescriptionProps): JSX.Element | null => {
             return (
                 <>
                     <DescriptionText>{PROJECT_DESCRIPTIONS.budger}</DescriptionText>
-                    <Button>Test</Button>
+                    <Button onClick={() => openInNewTab(BUDGER_DEMO)}>
+                        Demo <ButtonIcon />
+                    </Button>
+                    <Button onClick={() => openInNewTab(BUDGER_SOURCE)}>
+                        Source Code <ButtonIcon />
+                    </Button>
                 </>
             );
         }
