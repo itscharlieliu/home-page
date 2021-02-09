@@ -3,7 +3,7 @@ import { FiExternalLink } from "react-icons/fi";
 import styled from "styled-components";
 
 import { WithTheme } from "../../defs/defaultTheme";
-import { BUDGER_DEMO, BUDGER_SOURCE } from "../../defs/externalLinks";
+import { BUDGER_DEMO, BUDGER_SOURCE, SHORTEST_PATH_SOURCE } from "../../defs/externalLinks";
 import PROJECT_DESCRIPTIONS from "../../defs/projectDescriptions";
 import openInNewTab from "../../utils/openInNewTab";
 import BackgroundLine from "../common/BackgroundLine";
@@ -115,7 +115,14 @@ const Description = (props: DescriptionProps): JSX.Element | null => {
             );
         }
         case SelectedWork.shortestPathFinder: {
-            return <DescriptionText>{PROJECT_DESCRIPTIONS.shortestPathFinder}</DescriptionText>;
+            return (
+                <>
+                    <DescriptionText>{PROJECT_DESCRIPTIONS.shortestPathFinder}</DescriptionText>
+                    <Button onClick={() => openInNewTab(SHORTEST_PATH_SOURCE)}>
+                        Source Code and Demo <ButtonIcon />
+                    </Button>
+                </>
+            );
         }
         default: {
             return null;
