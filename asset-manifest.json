@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/home-page/static/css/main.0022cd7e.chunk.css",
+    "main.js": "/home-page/static/js/main.861de2e5.chunk.js",
+    "main.js.map": "/home-page/static/js/main.861de2e5.chunk.js.map",
+    "runtime-main.js": "/home-page/static/js/runtime-main.e5d0c88a.js",
+    "runtime-main.js.map": "/home-page/static/js/runtime-main.e5d0c88a.js.map",
+    "static/js/2.d544c84c.chunk.js": "/home-page/static/js/2.d544c84c.chunk.js",
+    "static/js/2.d544c84c.chunk.js.map": "/home-page/static/js/2.d544c84c.chunk.js.map",
+    "static/js/3.741108c5.chunk.js": "/home-page/static/js/3.741108c5.chunk.js",
+    "static/js/3.741108c5.chunk.js.map": "/home-page/static/js/3.741108c5.chunk.js.map",
+    "index.html": "/home-page/index.html",
+    "static/css/main.0022cd7e.chunk.css.map": "/home-page/static/css/main.0022cd7e.chunk.css.map",
+    "static/js/2.d544c84c.chunk.js.LICENSE.txt": "/home-page/static/js/2.d544c84c.chunk.js.LICENSE.txt",
+    "static/media/backgroundLineLong.593051eb.svg": "/home-page/static/media/backgroundLineLong.593051eb.svg",
+    "static/media/backgroundLineMed.c95e9471.svg": "/home-page/static/media/backgroundLineMed.c95e9471.svg",
+    "static/media/backgroundLineShort.a4dc1d6c.svg": "/home-page/static/media/backgroundLineShort.a4dc1d6c.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e5d0c88a.js",
+    "static/js/2.d544c84c.chunk.js",
+    "static/css/main.0022cd7e.chunk.css",
+    "static/js/main.861de2e5.chunk.js"
+  ]
+}
