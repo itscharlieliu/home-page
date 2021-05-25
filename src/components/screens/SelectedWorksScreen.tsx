@@ -3,7 +3,14 @@ import { FiExternalLink } from "react-icons/fi";
 import styled from "styled-components";
 
 import { WithTheme } from "../../defs/defaultTheme";
-import { BUDGER_DEMO, BUDGER_SOURCE, SHORTEST_PATH_SOURCE } from "../../defs/externalLinks";
+import { 
+    ADDRESS_SEARCH, 
+    ADDRESS_SEARCH_CLIENT_SOURCE, 
+    ADDRESS_SEARCH_SERVER_SOURCE, 
+    BUDGER_DEMO, 
+    BUDGER_SOURCE, 
+    SHORTEST_PATH_SOURCE 
+} from "../../defs/externalLinks";
 import PROJECT_DESCRIPTIONS from "../../defs/projectDescriptions";
 import openInNewTab from "../../utils/openInNewTab";
 import BackgroundLine from "../common/BackgroundLine";
@@ -11,6 +18,7 @@ import Button from "../common/Button";
 import ScreenContainer from "../common/ScreenContainer";
 import SlidingContainer from "../common/SlidingContainer";
 import Background from "../common/background";
+
 
 const BUTTON_UNDERLINE_WIDTH = 100;
 const BUTTON_SELECTED_UNDERLINE_WIDTH = 90;
@@ -93,6 +101,7 @@ enum SelectedWork {
     none,
     budger,
     shortestPathFinder,
+    addressSearch,
 }
 
 interface DescriptionProps {
@@ -123,6 +132,22 @@ const Description = (props: DescriptionProps): JSX.Element | null => {
                     </Button>
                 </>
             );
+        }
+        case SelectedWork.addressSearch: {
+            return (
+                <>
+                    <DescriptionText>{PROJECT_DESCRIPTIONS.addressSearch}</DescriptionText>
+                    <Button onClick={() => openInNewTab(ADDRESS_SEARCH)}>
+                        Demo <ButtonIcon />
+                    </Button>
+                    <Button onClick={() => openInNewTab(ADDRESS_SEARCH_CLIENT_SOURCE)}>
+                        Client Source Code <ButtonIcon />
+                    </Button>
+                    <Button onClick={() => openInNewTab(ADDRESS_SEARCH_SERVER_SOURCE)}>
+                        Server Source Code <ButtonIcon />
+                    </Button>
+                </>
+            )
         }
         default: {
             return null;
@@ -168,6 +193,14 @@ const SelectedWorksScreen = (): JSX.Element => {
                     </SelectedWorkButton>
                 </SlidingContainer>
                 <SlidingContainer startX={-screen.width / 2} startY={0} duration={0.85} delay={0.2}>
+                    <SelectedWorkButton
+                        active={selectedWork === SelectedWork.addressSearch}
+                        onClick={() => setSelectedWork(SelectedWork.addressSearch)}
+                    >
+                        Address Search
+                    </SelectedWorkButton>
+                </SlidingContainer>
+                <SlidingContainer startX={-screen.width / 2} startY={0} duration={0.85} delay={0.4}>
                     <SelectedWorkButton
                         active={selectedWork === SelectedWork.shortestPathFinder}
                         onClick={() => setSelectedWork(SelectedWork.shortestPathFinder)}
