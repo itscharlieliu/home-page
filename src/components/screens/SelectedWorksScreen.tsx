@@ -3,13 +3,13 @@ import { FiExternalLink } from "react-icons/fi";
 import styled from "styled-components";
 
 import { WithTheme } from "../../defs/defaultTheme";
-import { 
-    ADDRESS_SEARCH, 
-    ADDRESS_SEARCH_CLIENT_SOURCE, 
-    ADDRESS_SEARCH_SERVER_SOURCE, 
-    BUDGER_DEMO, 
-    BUDGER_SOURCE, 
-    SHORTEST_PATH_SOURCE 
+import {
+    ADDRESS_SEARCH,
+    ADDRESS_SEARCH_CLIENT_SOURCE,
+    ADDRESS_SEARCH_SERVER_SOURCE,
+    BUDGER_DEMO,
+    BUDGER_SOURCE,
+    SHORTEST_PATH_SOURCE,
 } from "../../defs/externalLinks";
 import PROJECT_DESCRIPTIONS from "../../defs/projectDescriptions";
 import openInNewTab from "../../utils/openInNewTab";
@@ -19,11 +19,10 @@ import ScreenContainer from "../common/ScreenContainer";
 import SlidingContainer from "../common/SlidingContainer";
 import Background from "../common/background";
 
-
 const BUTTON_UNDERLINE_WIDTH = 100;
 const BUTTON_SELECTED_UNDERLINE_WIDTH = 90;
 
-const ButtonsContainer = styled.div`
+const SelectedWorksContainer = styled.div`
     display: flex;
     flex-direction: column;
 `;
@@ -147,7 +146,7 @@ const Description = (props: DescriptionProps): JSX.Element | null => {
                         Server Source Code <ButtonIcon />
                     </Button>
                 </>
-            )
+            );
         }
         default: {
             return null;
@@ -183,35 +182,41 @@ const SelectedWorksScreen = (): JSX.Element => {
                     <BackgroundLine x={30} y={80} scale={15} color={"primary"} variant={"short"} />
                 </SlidingContainer>
             </Background>
-            <ButtonsContainer>
+            <SelectedWorksContainer>
                 <SlidingContainer startX={-screen.width / 2} startY={0} duration={0.85} delay={0}>
-                    <SelectedWorkButton
-                        active={selectedWork === SelectedWork.budger}
-                        onClick={() => setSelectedWork(SelectedWork.budger)}
-                    >
-                        Budger
-                    </SelectedWorkButton>
+                    <DescriptionContainer>
+                        <SelectedWorkButton
+                            active={selectedWork === SelectedWork.budger}
+                            onClick={() => setSelectedWork(SelectedWork.budger)}
+                        >
+                            Budger
+                        </SelectedWorkButton>
+                        <Description selectedWork={SelectedWork.budger} />
+                    </DescriptionContainer>
                 </SlidingContainer>
                 <SlidingContainer startX={-screen.width / 2} startY={0} duration={0.85} delay={0.2}>
-                    <SelectedWorkButton
-                        active={selectedWork === SelectedWork.addressSearch}
-                        onClick={() => setSelectedWork(SelectedWork.addressSearch)}
-                    >
-                        Address Search
-                    </SelectedWorkButton>
+                    <DescriptionContainer>
+                        <SelectedWorkButton
+                            active={selectedWork === SelectedWork.addressSearch}
+                            onClick={() => setSelectedWork(SelectedWork.addressSearch)}
+                        >
+                            Address Search
+                        </SelectedWorkButton>
+                        <Description selectedWork={SelectedWork.addressSearch} />
+                    </DescriptionContainer>
                 </SlidingContainer>
                 <SlidingContainer startX={-screen.width / 2} startY={0} duration={0.85} delay={0.4}>
-                    <SelectedWorkButton
-                        active={selectedWork === SelectedWork.shortestPathFinder}
-                        onClick={() => setSelectedWork(SelectedWork.shortestPathFinder)}
-                    >
-                        Shortest Path Finder
-                    </SelectedWorkButton>
+                    <DescriptionContainer>
+                        <SelectedWorkButton
+                            active={selectedWork === SelectedWork.shortestPathFinder}
+                            onClick={() => setSelectedWork(SelectedWork.shortestPathFinder)}
+                        >
+                            Shortest Path Finder
+                        </SelectedWorkButton>
+                        <Description selectedWork={SelectedWork.shortestPathFinder} />
+                    </DescriptionContainer>
                 </SlidingContainer>
-            </ButtonsContainer>
-            <DescriptionContainer>
-                <Description selectedWork={selectedWork} />
-            </DescriptionContainer>
+            </SelectedWorksContainer>
         </ScreenContainer>
     );
 };

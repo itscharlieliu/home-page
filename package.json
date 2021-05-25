@@ -1,7 +1,7 @@
 {
   "name": "home-page",
-  "version": "0.1.1",
-  "homepage": "https://itscharlieliu.github.io/home-page",
+  "version": "0.1.2",
+  "homepage": "https://itscharlieliu.github.io/home-page/",
   "private": false,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
