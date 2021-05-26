@@ -65,14 +65,13 @@ const AboutScreen = (): JSX.Element => {
 
             <AboutContainer>
                 <SlidingContainer startX={-screen.width / 2} startY={0} duration={0.85} delay={0}>
-                    <AboutTitle>Charlie Liu</AboutTitle>
+                    <AboutTitle>About Me</AboutTitle>
                     <DividerBar />
                 </SlidingContainer>
                 <AboutDescription>
                     <DescriptionBlock startX={-screen.width / 2} startY={0} duration={0.85} delay={0.2}>
-                        I am a recent graduate of Chapman University where I received my Bachelors of Science in
-                        Computer Science. I currently work as a Software Engineer developing both front end and back end
-                        software.
+                        I am currently a Full Stack Software Engineer with experience in developing both front-ends
+                        using React.js and back-ends using Python or Go
                     </DescriptionBlock>
                     <DescriptionBlock startX={-screen.width / 2} startY={0} duration={0.85} delay={0.4}>
                         When I am not working and/or learning new things, I enjoy meeting new people, playing video
