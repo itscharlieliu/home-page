@@ -18,6 +18,7 @@ import Button from "../common/Button";
 import ScreenContainer from "../common/ScreenContainer";
 import SlidingContainer from "../common/SlidingContainer";
 import Background from "../common/background";
+import Card from "../common/card";
 
 const BUTTON_UNDERLINE_WIDTH = 100;
 const BUTTON_SELECTED_UNDERLINE_WIDTH = 90;
@@ -27,9 +28,10 @@ const SelectedWorksContainer = styled.div`
     flex-direction: column;
 `;
 
-const DescriptionContainer = styled.div`
+const DescriptionContainer = styled(Card)`
     display: flex;
     flex-direction: column;
+    margin: 50px 0;
 `;
 
 const DescriptionText = styled.span`

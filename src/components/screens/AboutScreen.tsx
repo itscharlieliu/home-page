@@ -6,8 +6,9 @@ import BackgroundLine from "../common/BackgroundLine";
 import ScreenContainer from "../common/ScreenContainer";
 import SlidingContainer from "../common/SlidingContainer";
 import Background from "../common/background";
+import Card from "../common/card";
 
-const AboutContainer = styled.div`
+const AboutContainer = styled(Card)`
     display: flex;
     flex-direction: column;
 `;
@@ -31,7 +32,7 @@ const AboutDescription = styled.div<AboutDescriptionProps>`
     font-size: 1.5em;
 `;
 
-const DescriptionBlock = styled(SlidingContainer)`
+const DescriptionBlock = styled.div`
     margin: 2em 0;
     line-height: 1.5em;
 `;
@@ -62,25 +63,24 @@ const AboutScreen = (): JSX.Element => {
                     <BackgroundLine x={30} y={80} scale={15} color={"primary"} variant={"short"} />
                 </SlidingContainer>
             </Background>
-
-            <AboutContainer>
-                <SlidingContainer startX={-screen.width / 2} startY={0} duration={0.85} delay={0}>
+            <SlidingContainer startX={-screen.width / 2} startY={0} duration={0.85} delay={0}>
+                <AboutContainer>
                     <AboutTitle>About Me</AboutTitle>
                     <DividerBar />
-                </SlidingContainer>
-                <AboutDescription>
-                    <DescriptionBlock startX={-screen.width / 2} startY={0} duration={0.85} delay={0.2}>
-                        I am currently a Full Stack Software Engineer with experience in developing both front-ends
-                        using React.js and back-ends using Python or Go
-                    </DescriptionBlock>
-                    <DescriptionBlock startX={-screen.width / 2} startY={0} duration={0.85} delay={0.4}>
-                        When I am not working and/or learning new things, I enjoy meeting new people, playing video
-                        games, and programming small personal projects on the side. I am passionate about technology and
-                        plan continually learning more about cloud computing services such as those provided by Amazon
-                        Web Services.
-                    </DescriptionBlock>
-                </AboutDescription>
-            </AboutContainer>
+                    <AboutDescription>
+                        <DescriptionBlock>
+                            I am currently a Full Stack Software Engineer with experience in developing both front-ends
+                            using React.js and back-ends using Python or Go
+                        </DescriptionBlock>
+                        <DescriptionBlock>
+                            When I am not working and/or learning new things, I enjoy meeting new people, playing video
+                            games, and programming small personal projects on the side. I am passionate about technology
+                            and plan continually learning more about cloud computing services such as those provided by
+                            Amazon Web Services.
+                        </DescriptionBlock>
+                    </AboutDescription>
+                </AboutContainer>
+            </SlidingContainer>
         </ScreenContainer>
     );
 };

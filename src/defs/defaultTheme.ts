@@ -1,9 +1,5 @@
 export interface Theme {
-    primary: string;
-    secondary: string;
-    background: string;
-    text: string;
-    error: string;
+    [key: string]: string;
 }
 
 export interface WithTheme {
@@ -14,8 +10,10 @@ const defaultTheme: Theme = {
     primary: "#fca311",
     secondary: "#14213d",
     background: "#0f192e",
+    cardBackground: "#1F1F1F",
     text: "#e5e5e5",
     error: "#ff0000",
+    boxShadow1: "0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);",
 };
 
 // const defaultTheme: Theme = {

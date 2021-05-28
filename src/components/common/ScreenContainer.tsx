@@ -10,16 +10,7 @@ const ScreenContainer = styled.div`
     height: 100%;
     margin-left: auto;
     margin-right: auto;
-    overflow: auto;
-
-    /* Hide scrollbar for Chrome, Safari and Opera */
-    &::-webkit-scrollbar {
-        display: none;
-    }
-
-    /* Hide scrollbar for IE, Edge and Firefox */
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
+    padding: 50px 0;
 
     @media only screen and (max-width: ${COMPACT_WIDTH}px) {
         & {
