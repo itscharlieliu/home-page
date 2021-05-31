@@ -5,6 +5,7 @@ import { useHistory, useLocation } from "react-router-dom";
 import styled from "styled-components";
 
 import { EMAIL } from "../defs/contactInfo";
+import { WithTheme } from "../defs/defaultTheme";
 import { COMPACT_WIDTH, MOBILE_WIDTH } from "../defs/dimentions";
 import { ABOUT, SELECTED_WORKS } from "../defs/routerPaths";
 import useWindowSize from "../utils/useWindowSize";
@@ -13,11 +14,12 @@ import Button from "./common/Button";
 
 const HeaderContainer = styled.div`
     width: 100%;
-    height: 50px;
     display: flex;
     align-items: center;
     justify-content: right;
-    padding: 50px 0 0;
+    background-color: ${(props: WithTheme) => props.theme.cardBackground};
+    box-shadow: ${(props: WithTheme) => props.theme.boxShadow1};
+    z-index: 9;
 `;
 
 const LogoContainer = styled.span`
