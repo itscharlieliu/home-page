@@ -14,6 +14,7 @@ const ButtonUnderline = styled.div<HeaderButtonUnderlineProps>`
     position: absolute;
     height: 5px;
     width: ${(props: HeaderButtonUnderlineProps): number => (props.active ? BUTTON_SELECTED_UNDERLINE_WIDTH : 0)}px;
+    max-width: 100%;
     background: ${(props: WithTheme) => props.theme.primary};
     transition: width 0.1s;
 `;

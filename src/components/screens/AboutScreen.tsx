@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import { WithTheme } from "../../defs/defaultTheme";
+import { MOBILE_WIDTH } from "../../defs/dimentions";
 import BackgroundLine from "../common/BackgroundLine";
 import ScreenContainer from "../common/ScreenContainer";
 import SlidingContainer from "../common/SlidingContainer";
@@ -11,6 +12,8 @@ import Card from "../common/card";
 const AboutContainer = styled(Card)`
     display: flex;
     flex-direction: column;
+
+    margin: 10%;
 `;
 
 const AboutTitle = styled.span`
@@ -30,6 +33,12 @@ interface AboutDescriptionProps {
 
 const AboutDescription = styled.div<AboutDescriptionProps>`
     font-size: 1.5em;
+
+    @media only screen and (max-width: ${MOBILE_WIDTH}px) {
+        & {
+            font-size: 1em;
+        }
+    }
 `;
 
 const DescriptionBlock = styled.div`
