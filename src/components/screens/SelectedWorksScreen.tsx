@@ -2,7 +2,6 @@ import React from "react";
 import { FiExternalLink } from "react-icons/fi";
 import styled from "styled-components";
 
-import { WithTheme } from "../../defs/defaultTheme";
 import { MOBILE_WIDTH } from "../../defs/dimentions";
 import {
     ADDRESS_SEARCH,
@@ -20,6 +19,7 @@ import ScreenContainer from "../common/ScreenContainer";
 import SlidingContainer from "../common/SlidingContainer";
 import Background from "../common/background";
 import Card from "../common/card";
+import CardHeader from "../common/cardHeader";
 
 const SelectedWorksContainer = styled.div`
     display: flex;
@@ -50,45 +50,9 @@ const DescriptionText = styled.span`
     }
 `;
 
-interface SelectedWorkButtonUnderlineProps {
-    active?: boolean;
-}
-
-const SelectedWorkButtonUnderline = styled.div<SelectedWorkButtonUnderlineProps>`
-    position: absolute;
-    height: 5px;
-    width: 90px;
-    background: ${(props: WithTheme) => props.theme.primary};
-    transition: width 0.1s;
-`;
-
-const SelectedWorkButtonElement = styled.div`
-    background: none;
-    color: ${(props: WithTheme) => props.theme.text};
-
-    outline: none;
-    border: none;
-    display: flex;
-    align-items: center;
-    width: max-content;
-    font-size: 3em;
-
-    padding: 0;
-    margin: 10px 0;
-`;
-
 const ButtonIcon = styled(FiExternalLink)`
     margin-left: 12px;
 `;
-
-const SelectedWorkButton = (props: React.ButtonHTMLAttributes<HTMLDivElement>): JSX.Element => {
-    return (
-        <div>
-            <SelectedWorkButtonElement {...props} />
-            <SelectedWorkButtonUnderline />
-        </div>
-    );
-};
 
 enum SelectedWork {
     none,
@@ -177,19 +141,19 @@ const SelectedWorksScreen = (): JSX.Element => {
             <SelectedWorksContainer>
                 <SlidingContainer startX={-screen.width / 2} startY={0} duration={0.85} delay={0}>
                     <DescriptionContainer>
-                        <SelectedWorkButton>Budger</SelectedWorkButton>
+                        <CardHeader title={"Budger"} />
                         <Description selectedWork={SelectedWork.budger} />
                     </DescriptionContainer>
                 </SlidingContainer>
                 <SlidingContainer startX={-screen.width / 2} startY={0} duration={0.85} delay={0.2}>
                     <DescriptionContainer>
-                        <SelectedWorkButton>Address Search</SelectedWorkButton>
+                        <CardHeader title={"Address Search"} />
                         <Description selectedWork={SelectedWork.addressSearch} />
                     </DescriptionContainer>
                 </SlidingContainer>
                 <SlidingContainer startX={-screen.width / 2} startY={0} duration={0.85} delay={0.4}>
                     <DescriptionContainer>
-                        <SelectedWorkButton>Shortest Path Finder</SelectedWorkButton>
+                        <CardHeader title={"Shortest Path Finder"} />
                         <Description selectedWork={SelectedWork.shortestPathFinder} />
                     </DescriptionContainer>
                 </SlidingContainer>

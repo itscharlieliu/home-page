@@ -1,30 +1,19 @@
 import React from "react";
 import styled from "styled-components";
 
-import { WithTheme } from "../../defs/defaultTheme";
 import { MOBILE_WIDTH } from "../../defs/dimentions";
 import BackgroundLine from "../common/BackgroundLine";
 import ScreenContainer from "../common/ScreenContainer";
 import SlidingContainer from "../common/SlidingContainer";
 import Background from "../common/background";
 import Card from "../common/card";
+import CardHeader from "../common/cardHeader";
 
 const AboutContainer = styled(Card)`
     display: flex;
     flex-direction: column;
 
     margin: 10%;
-`;
-
-const AboutTitle = styled.span`
-    font-size: 3em;
-`;
-
-const DividerBar = styled.div`
-    width: 100px;
-    height: 5px;
-    margin: 20px 0;
-    background: ${(props: WithTheme) => props.theme.primary};
 `;
 
 interface AboutDescriptionProps {
@@ -74,8 +63,7 @@ const AboutScreen = (): JSX.Element => {
             </Background>
             <SlidingContainer startX={-screen.width / 2} startY={0} duration={0.85} delay={0}>
                 <AboutContainer>
-                    <AboutTitle>About Me</AboutTitle>
-                    <DividerBar />
+                    <CardHeader title={"About Me"} />
                     <AboutDescription>
                         <DescriptionBlock>
                             I am currently a Full Stack Software Engineer with experience in developing both front-ends
