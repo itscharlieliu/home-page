@@ -20,6 +20,7 @@ import SlidingContainer from "../common/SlidingContainer";
 import Background from "../common/background";
 import Card from "../common/card";
 import CardHeader from "../common/cardHeader";
+import { BUDGER_ACCOUNTS_SCREENSHOT } from "../../defs/images";
 
 const SelectedWorksContainer = styled.div`
     display: flex;
@@ -140,7 +141,7 @@ const SelectedWorksScreen = (): JSX.Element => {
             </Background>
             <SelectedWorksContainer>
                 <SlidingContainer startX={-screen.width / 2} startY={0} duration={0.85} delay={0}>
-                    <DescriptionContainer>
+                    <DescriptionContainer image={BUDGER_ACCOUNTS_SCREENSHOT}>
                         <CardHeader title={"Budger"} />
                         <Description selectedWork={SelectedWork.budger} />
                     </DescriptionContainer>
