@@ -20,7 +20,7 @@ import SlidingContainer from "../common/SlidingContainer";
 import Background from "../common/background";
 import Card from "../common/card";
 import CardHeader from "../common/cardHeader";
-import { BUDGER_ACCOUNTS_SCREENSHOT } from "../../defs/images";
+import { BUDGER_ACCOUNTS_SCREENSHOT, SHORTEST_PATH_FINDER_SCREENSHOT } from "../../defs/images";
 
 const SelectedWorksContainer = styled.div`
     display: flex;
@@ -147,7 +147,7 @@ const SelectedWorksScreen = (): JSX.Element => {
                     </DescriptionContainer>
                 </SlidingContainer>
                 <SlidingContainer startX={-screen.width / 2} startY={0} duration={0.85} delay={0.2}>
-                    <DescriptionContainer>
+                    <DescriptionContainer image={SHORTEST_PATH_FINDER_SCREENSHOT}>
                         <CardHeader title={"Address Search"} />
                         <Description selectedWork={SelectedWork.addressSearch} />
                     </DescriptionContainer>
