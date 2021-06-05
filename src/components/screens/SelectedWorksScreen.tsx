@@ -146,13 +146,13 @@ const SelectedWorksScreen = (): JSX.Element => {
                 </DescriptionContainer>
             </SlidingContainer>
             <SlidingContainer startX={-screen.width / 2} startY={0} duration={0.85} delay={0.2}>
-                <DescriptionContainer image={SHORTEST_PATH_FINDER_SCREENSHOT}>
+                <DescriptionContainer>
                     <CardHeader title={"Address Search"} />
                     <Description selectedWork={SelectedWork.addressSearch} />
                 </DescriptionContainer>
             </SlidingContainer>
             <SlidingContainer startX={-screen.width / 2} startY={0} duration={0.85} delay={0.4}>
-                <DescriptionContainer>
+                <DescriptionContainer image={SHORTEST_PATH_FINDER_SCREENSHOT}>
                     <CardHeader title={"Shortest Path Finder"} />
                     <Description selectedWork={SelectedWork.shortestPathFinder} />
                 </DescriptionContainer>

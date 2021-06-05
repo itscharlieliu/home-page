@@ -1,6 +1,8 @@
-import styled from "styled-components";
-import { WithTheme } from "../../defs/defaultTheme";
 import React from "react";
+import styled from "styled-components";
+
+import { WithTheme } from "../../defs/defaultTheme";
+import { MOBILE_WIDTH } from "../../defs/dimentions";
 
 const CardContainer = styled.div`
     box-shadow: ${(props: WithTheme) => props.theme.boxShadow1};
@@ -15,6 +17,16 @@ const CardContainer = styled.div`
     & > img {
         width: 40%;
         object-fit: cover;
+    }
+
+    @media only screen and (max-width: ${MOBILE_WIDTH}px) {
+        & {
+            flex-direction: column;
+        }
+
+        & > img {
+            width: 100%;
+        }
     }
 `;
 
