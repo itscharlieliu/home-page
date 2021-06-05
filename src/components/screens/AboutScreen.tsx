@@ -12,8 +12,6 @@ import CardHeader from "../common/cardHeader";
 const AboutContainer = styled(Card)`
     display: flex;
     flex-direction: column;
-
-    margin: 10%;
 `;
 
 interface AboutDescriptionProps {

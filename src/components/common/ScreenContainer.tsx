@@ -5,8 +5,15 @@ const ScreenContainer = styled.div`
     flex-direction: column;
 
     align-items: center;
-    width: 100%;
+    width: 80%;
     height: 100%;
+
+    padding: 10%;
+
+    // First child is the background and second child is the first card element
+    & > *:nth-child(n + 3) {
+        margin: 50px 0 0 0;
+    }
 
     overflow: auto;
 
@@ -17,7 +24,7 @@ const ScreenContainer = styled.div`
 
     /* Hide scrollbar for IE, Edge and Firefox */
     -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; Firefox
+    scrollbar-width: none; /*Firefox*/
 `;
 
 export default ScreenContainer;

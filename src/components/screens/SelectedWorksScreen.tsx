@@ -11,6 +11,7 @@ import {
     BUDGER_SOURCE,
     SHORTEST_PATH_SOURCE,
 } from "../../defs/externalLinks";
+import { BUDGER_ACCOUNTS_SCREENSHOT, SHORTEST_PATH_FINDER_SCREENSHOT } from "../../defs/images";
 import PROJECT_DESCRIPTIONS from "../../defs/projectDescriptions";
 import openInNewTab from "../../utils/openInNewTab";
 import BackgroundLine from "../common/BackgroundLine";
@@ -20,19 +21,18 @@ import SlidingContainer from "../common/SlidingContainer";
 import Background from "../common/background";
 import Card from "../common/card";
 import CardHeader from "../common/cardHeader";
-import { BUDGER_ACCOUNTS_SCREENSHOT, SHORTEST_PATH_FINDER_SCREENSHOT } from "../../defs/images";
 
-const SelectedWorksContainer = styled.div`
-    display: flex;
-    flex-direction: column;
+// const SelectedWorksContainer = styled.div`
+//     display: flex;
+//     flex-direction: column;
 
-    margin: 10%;
-    width: 80%;
+//     margin: 10%;
+//     width: 80%;
 
-    & > *:not(:first-child) {
-        margin: 50px 0 0 0;
-    }
-`;
+//     & > *:not(:first-child) {
+//         margin: 50px 0 0 0;
+//     }
+// `;
 
 const DescriptionContainer = styled(Card)`
     display: flex;
@@ -139,26 +139,24 @@ const SelectedWorksScreen = (): JSX.Element => {
                     <BackgroundLine x={30} y={80} scale={15} color={"primary"} variant={"short"} />
                 </SlidingContainer>
             </Background>
-            <SelectedWorksContainer>
-                <SlidingContainer startX={-screen.width / 2} startY={0} duration={0.85} delay={0}>
-                    <DescriptionContainer image={BUDGER_ACCOUNTS_SCREENSHOT}>
-                        <CardHeader title={"Budger"} />
-                        <Description selectedWork={SelectedWork.budger} />
-                    </DescriptionContainer>
-                </SlidingContainer>
-                <SlidingContainer startX={-screen.width / 2} startY={0} duration={0.85} delay={0.2}>
-                    <DescriptionContainer image={SHORTEST_PATH_FINDER_SCREENSHOT}>
-                        <CardHeader title={"Address Search"} />
-                        <Description selectedWork={SelectedWork.addressSearch} />
-                    </DescriptionContainer>
-                </SlidingContainer>
-                <SlidingContainer startX={-screen.width / 2} startY={0} duration={0.85} delay={0.4}>
-                    <DescriptionContainer>
-                        <CardHeader title={"Shortest Path Finder"} />
-                        <Description selectedWork={SelectedWork.shortestPathFinder} />
-                    </DescriptionContainer>
-                </SlidingContainer>
-            </SelectedWorksContainer>
+            <SlidingContainer startX={-screen.width / 2} startY={0} duration={0.85} delay={0}>
+                <DescriptionContainer image={BUDGER_ACCOUNTS_SCREENSHOT}>
+                    <CardHeader title={"Budger"} />
+                    <Description selectedWork={SelectedWork.budger} />
+                </DescriptionContainer>
+            </SlidingContainer>
+            <SlidingContainer startX={-screen.width / 2} startY={0} duration={0.85} delay={0.2}>
+                <DescriptionContainer image={SHORTEST_PATH_FINDER_SCREENSHOT}>
+                    <CardHeader title={"Address Search"} />
+                    <Description selectedWork={SelectedWork.addressSearch} />
+                </DescriptionContainer>
+            </SlidingContainer>
+            <SlidingContainer startX={-screen.width / 2} startY={0} duration={0.85} delay={0.4}>
+                <DescriptionContainer>
+                    <CardHeader title={"Shortest Path Finder"} />
+                    <Description selectedWork={SelectedWork.shortestPathFinder} />
+                </DescriptionContainer>
+            </SlidingContainer>
         </ScreenContainer>
     );
 };
