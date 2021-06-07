@@ -8,11 +8,13 @@ const ScreenContainer = styled.div`
     width: 80%;
     height: 100%;
 
-    padding: 10%;
+    padding: 0 10%;
 
-    // First child is the background and second child is the first card element
-    & > *:nth-child(n + 3) {
+    & > * {
         margin: 50px 0 0 0;
+    }
+    & > *:last-child {
+        margin: 50px 0;
     }
 
     overflow: auto;

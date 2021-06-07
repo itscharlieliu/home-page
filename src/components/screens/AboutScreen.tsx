@@ -59,23 +59,21 @@ const AboutScreen = (): JSX.Element => {
                     <BackgroundLine x={30} y={80} scale={15} color={"primary"} variant={"short"} />
                 </SlidingContainer>
             </Background>
-            <SlidingContainer startX={-screen.width / 2} startY={0} duration={0.85} delay={0}>
-                <AboutContainer>
-                    <CardHeader title={"About Me"} />
-                    <AboutDescription>
-                        <DescriptionBlock>
-                            I am currently a Full Stack Software Engineer with experience in developing both front-ends
-                            using React.js and back-ends using Python or Go
-                        </DescriptionBlock>
-                        <DescriptionBlock>
-                            When I am not working and/or learning new things, I enjoy meeting new people, playing video
-                            games, and programming small personal projects on the side. I am passionate about technology
-                            and plan continually learning more about cloud computing services such as those provided by
-                            Amazon Web Services.
-                        </DescriptionBlock>
-                    </AboutDescription>
-                </AboutContainer>
-            </SlidingContainer>
+            <AboutContainer>
+                <CardHeader title={"About Me"} />
+                <AboutDescription>
+                    <DescriptionBlock>
+                        I am currently a Full Stack Software Engineer with experience in developing both front-ends
+                        using React.js and back-ends using Python or Go
+                    </DescriptionBlock>
+                    <DescriptionBlock>
+                        When I am not working and/or learning new things, I enjoy meeting new people, playing video
+                        games, and programming small personal projects on the side. I am passionate about technology and
+                        plan continually learning more about cloud computing services such as those provided by Amazon
+                        Web Services.
+                    </DescriptionBlock>
+                </AboutDescription>
+            </AboutContainer>
         </ScreenContainer>
     );
 };

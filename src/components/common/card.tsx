@@ -9,22 +9,26 @@ const CardContainer = styled.div`
     border-radius: 10px;
     background-color: ${(props: WithTheme) => props.theme.cardBackground};
 
+    width: 100%;
+
     display: flex;
     flex-direction: row;
-
-    overflow: hidden;
-
-    & > img {
-        width: 40%;
-        object-fit: cover;
-    }
 
     @media only screen and (max-width: ${MOBILE_WIDTH}px) {
         & {
             flex-direction: column;
         }
+    }
+`;
 
-        & > img {
+const Image = styled.img`
+    width: 40%;
+    object-fit: cover;
+
+    border-radius: inherit;
+
+    @media only screen and (max-width: ${MOBILE_WIDTH}px) {
+        & {
             width: 100%;
         }
     }
@@ -45,7 +49,7 @@ const Card = (props: CardProps): JSX.Element => {
 
     return (
         <CardContainer>
-            {image ? <img src={image} /> : null}
+            {image ? <Image src={image} /> : null}
             <CardContent {...otherProps}></CardContent>
         </CardContainer>
     );

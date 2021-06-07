@@ -139,24 +139,18 @@ const SelectedWorksScreen = (): JSX.Element => {
                     <BackgroundLine x={30} y={80} scale={15} color={"primary"} variant={"short"} />
                 </SlidingContainer>
             </Background>
-            <SlidingContainer startX={-screen.width / 2} startY={0} duration={0.85} delay={0}>
-                <DescriptionContainer image={BUDGER_ACCOUNTS_SCREENSHOT}>
-                    <CardHeader title={"Budger"} />
-                    <Description selectedWork={SelectedWork.budger} />
-                </DescriptionContainer>
-            </SlidingContainer>
-            <SlidingContainer startX={-screen.width / 2} startY={0} duration={0.85} delay={0.2}>
-                <DescriptionContainer>
-                    <CardHeader title={"Address Search"} />
-                    <Description selectedWork={SelectedWork.addressSearch} />
-                </DescriptionContainer>
-            </SlidingContainer>
-            <SlidingContainer startX={-screen.width / 2} startY={0} duration={0.85} delay={0.4}>
-                <DescriptionContainer image={SHORTEST_PATH_FINDER_SCREENSHOT}>
-                    <CardHeader title={"Shortest Path Finder"} />
-                    <Description selectedWork={SelectedWork.shortestPathFinder} />
-                </DescriptionContainer>
-            </SlidingContainer>
+            <DescriptionContainer image={BUDGER_ACCOUNTS_SCREENSHOT}>
+                <CardHeader title={"Budger"} />
+                <Description selectedWork={SelectedWork.budger} />
+            </DescriptionContainer>
+            <DescriptionContainer>
+                <CardHeader title={"Address Search"} />
+                <Description selectedWork={SelectedWork.addressSearch} />
+            </DescriptionContainer>
+            <DescriptionContainer image={SHORTEST_PATH_FINDER_SCREENSHOT}>
+                <CardHeader title={"Shortest Path Finder"} />
+                <Description selectedWork={SelectedWork.shortestPathFinder} />
+            </DescriptionContainer>
         </ScreenContainer>
     );
 };
