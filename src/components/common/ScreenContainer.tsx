@@ -10,6 +10,8 @@ const ScreenContainer = styled.div`
 
     padding: 0 10%;
 
+    max-width: 960px;
+
     & > * {
         margin: 50px 0 0 0;
     }
