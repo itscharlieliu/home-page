@@ -1,4 +1,5 @@
 import React from "react";
+import ImgsViewer from "react-images-viewer";
 import styled from "styled-components";
 
 import { WithTheme } from "../../defs/defaultTheme";
@@ -21,18 +22,18 @@ const CardContainer = styled.div`
     }
 `;
 
-const Image = styled.img`
-    width: 40%;
-    object-fit: cover;
+// const Image = styled.img`
+//     width: 40%;
+//     object-fit: cover;
 
-    border-radius: inherit;
+//     border-radius: inherit;
 
-    @media only screen and (max-width: ${MOBILE_WIDTH}px) {
-        & {
-            width: 100%;
-        }
-    }
-`;
+//     @media only screen and (max-width: ${MOBILE_WIDTH}px) {
+//         & {
+//             width: 100%;
+//         }
+//     }
+// `;
 
 const CardContent = styled.div`
     display: flex;
@@ -41,15 +42,15 @@ const CardContent = styled.div`
 `;
 
 interface CardProps extends React.ButtonHTMLAttributes<HTMLDivElement> {
-    image?: string;
+    images?: unknown; // TODO update this
 }
 
 const Card = (props: CardProps): JSX.Element => {
-    const { image, ...otherProps } = props;
+    const { images, ...otherProps } = props;
 
     return (
         <CardContainer>
-            {image ? <Image src={image} /> : null}
+            {images ? <ImgsViewer imgs={images} isOpen /> : null}
             <CardContent {...otherProps}></CardContent>
         </CardContainer>
     );

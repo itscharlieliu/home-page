@@ -139,7 +139,7 @@ const SelectedWorksScreen = (): JSX.Element => {
                     <BackgroundLine x={30} y={80} scale={15} color={"primary"} variant={"short"} />
                 </SlidingContainer>
             </Background>
-            <DescriptionContainer image={BUDGER_ACCOUNTS_SCREENSHOT}>
+            <DescriptionContainer images={[{ src: BUDGER_ACCOUNTS_SCREENSHOT }]}>
                 <CardHeader title={"Budger"} />
                 <Description selectedWork={SelectedWork.budger} />
             </DescriptionContainer>
@@ -147,7 +147,7 @@ const SelectedWorksScreen = (): JSX.Element => {
                 <CardHeader title={"Address Search"} />
                 <Description selectedWork={SelectedWork.addressSearch} />
             </DescriptionContainer>
-            <DescriptionContainer image={SHORTEST_PATH_FINDER_SCREENSHOT}>
+            <DescriptionContainer images={[{ src: SHORTEST_PATH_FINDER_SCREENSHOT }]}>
                 <CardHeader title={"Shortest Path Finder"} />
                 <Description selectedWork={SelectedWork.shortestPathFinder} />
             </DescriptionContainer>
