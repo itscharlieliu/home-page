@@ -1,4 +1,4 @@
-import { Code, Camera } from "lucide-react";
+import { Code, Camera, Facebook } from "lucide-react";
 import ProjectCard from "@/components/ProjectCard";
 
 export default function ProjectsSection() {
@@ -10,7 +10,7 @@ export default function ProjectsSection() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4 text-slate-800 dark:text-slate-200">
-            Coding Projects
+            Software Development
           </h2>
           <p className="text-lg text-slate-600 dark:text-slate-400">
             Innovative solutions and creative applications
@@ -19,28 +19,36 @@ export default function ProjectsSection() {
 
         <div className="grid lg:grid-cols-2 gap-8">
           <ProjectCard
-            title="E-Commerce Platform"
-            description="A full-stack e-commerce solution built with Next.js, featuring modern UI/UX design and seamless payment integration."
-            technologies={["Next.js", "TypeScript", "Tailwind"]}
+            title="Budger: Budgeting Platform"
+            description="A full-stack budgeting solution built with React, featuring modern UI/UX design and seamless transaction tracking."
+            technologies={["React.js", "TypeScript"]}
             icon={Code}
             iconColor="text-blue-600 dark:text-blue-400"
             bgGradient="bg-gradient-to-br from-blue-100 to-purple-100 dark:from-blue-900/20 dark:to-purple-900/20"
-            links={{
-              demo: "#",
-              github: "#",
-            }}
+            links={[
+              {
+                url: "https://itscharlieliu.github.io/budger/#/budget",
+                label: "Demo",
+              },
+              {
+                url: "https://github.com/itscharlieliu/budger",
+                label: "Github",
+              },
+            ]}
           />
           <ProjectCard
-            title="Photo Gallery App"
-            description="A responsive photo gallery application with advanced filtering, search functionality, and smooth animations."
-            technologies={["React", "JavaScript", "CSS3"]}
-            icon={Camera}
+            title="Facebook Marketplace"
+            description="Developed multiple Facebook marketplace features, including showing the sharesheet when taking a screenshot, and GenAI Vehicle Insights"
+            technologies={["React Native", "Hack"]}
+            icon={Facebook}
             iconColor="text-green-600 dark:text-green-400"
             bgGradient="bg-gradient-to-br from-green-100 to-blue-100 dark:from-green-900/20 dark:to-blue-900/20"
-            links={{
-              demo: "#",
-              github: "#",
-            }}
+            links={[
+              {
+                url: "https://www.facebook.com/marketplace/",
+                label: "Demo",
+              },
+            ]}
           />
         </div>
       </div>

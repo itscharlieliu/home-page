@@ -1,5 +1,10 @@
-import { Mail, Github, Linkedin } from "lucide-react";
-import { GITHUB_URL, LINKEDIN_URL, EMAIL_URL } from "../../common/links";
+import { Mail, Github, Linkedin, Instagram } from "lucide-react";
+import {
+  GITHUB_URL,
+  LINKEDIN_URL,
+  EMAIL_URL,
+  INSTAGRAM,
+} from "../../common/links";
 
 export default function ContactSection() {
   return (
@@ -16,7 +21,7 @@ export default function ContactSection() {
           together.
         </p>
 
-        <div className="grid md:grid-cols-3 gap-8 mb-12">
+        <div className="grid md:grid-cols-4 gap-8 mb-12">
           <div className="text-center">
             <a href={EMAIL_URL} className="block group" aria-label="Send email">
               <div className="w-16 h-16 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-200 dark:group-hover:bg-blue-800/50 transition-colors duration-300">
@@ -65,6 +70,26 @@ export default function ContactSection() {
               <h3 className="font-semibold mb-2">LinkedIn</h3>
               <p className="text-slate-600 dark:text-slate-400">
                 @itscharlieliu
+              </p>
+            </a>
+          </div>
+          <div className="text-center">
+            <a
+              href={INSTAGRAM}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block group"
+              aria-label="Visit Instagram profile"
+            >
+              <div className="w-16 h-16 bg-pink-100 dark:bg-pink-900/30 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-pink-200 dark:group-hover:bg-pink-800/50 transition-colors duration-300">
+                <Instagram
+                  className="text-pink-600 dark:text-pink-400"
+                  size={24}
+                />
+              </div>
+              <h3 className="font-semibold mb-2">Instagram</h3>
+              <p className="text-slate-600 dark:text-slate-400">
+                @charlieliuphoto
               </p>
             </a>
           </div>

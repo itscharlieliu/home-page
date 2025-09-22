@@ -7,10 +7,7 @@ interface ProjectCardProps {
   icon: LucideIcon;
   iconColor: string;
   bgGradient: string;
-  links: {
-    demo?: string;
-    github?: string;
-  };
+  links: [{ url: string; label: string }];
 }
 
 export default function ProjectCard({
@@ -23,8 +20,10 @@ export default function ProjectCard({
   links,
 }: ProjectCardProps) {
   return (
-    <div className="bg-white dark:bg-slate-800 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow hover-lift">
-      <div className={`w-full h-48 ${bgGradient} rounded-xl mb-6 flex items-center justify-center`}>
+    <div className="bg-white dark:bg-slate-800 rounded-2xl p-8 shadow-lg">
+      <div
+        className={`w-full h-48 ${bgGradient} rounded-xl mb-6 flex items-center justify-center`}
+      >
         <Icon className={iconColor} size={48} />
       </div>
       <h3 className="text-xl font-bold mb-3">{title}</h3>
@@ -40,26 +39,19 @@ export default function ProjectCard({
         ))}
       </div>
       <div className="flex space-x-4">
-        {links.demo && (
-          <a
-            href={links.demo}
-            className="text-blue-600 hover:text-blue-700 transition-colors"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Live Demo
-          </a>
-        )}
-        {links.github && (
-          <a
-            href={links.github}
-            className="text-slate-600 hover:text-slate-700 transition-colors"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            GitHub
-          </a>
-        )}
+        {links.map((link) => {
+          return (
+            <a
+              key={link.url}
+              href={link.url}
+              className="text-blue-600 hover:text-blue-700 transition-colors"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {link.label}
+            </a>
+          );
+        })}
       </div>
     </div>
   );

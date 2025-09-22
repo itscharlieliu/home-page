@@ -1,5 +1,7 @@
-import { EMAIL_URL, GITHUB_URL, LINKEDIN_URL } from "@/common/links";
-import { ArrowRight, Github, Linkedin, Mail } from "lucide-react";
+"use client";
+
+import { EMAIL_URL, GITHUB_URL, LINKEDIN_URL, INSTAGRAM } from "@/common/links";
+import { ArrowRight, Github, Linkedin, Mail, Instagram } from "lucide-react";
 import Image from "next/image";
 
 export default function HeroSection() {
@@ -25,7 +27,14 @@ export default function HeroSection() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <button className="group bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-full font-semibold hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300 flex items-center justify-center">
+              <button
+                onClick={() => {
+                  document.getElementById("photography")?.scrollIntoView({
+                    behavior: "smooth",
+                  });
+                }}
+                className="group bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-full font-semibold hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300 flex items-center justify-center"
+              >
                 View My Work
                 <ArrowRight
                   className="ml-2 group-hover:translate-x-1 transition-transform"
@@ -38,6 +47,14 @@ export default function HeroSection() {
             </div>
 
             <div className="flex space-x-6">
+              <a
+                href={INSTAGRAM}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-slate-400 hover:text-pink-600 transition-colors"
+              >
+                <Instagram size={24} />
+              </a>
               <a
                 href={GITHUB_URL}
                 target="_blank"
