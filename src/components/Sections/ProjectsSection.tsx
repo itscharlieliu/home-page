@@ -1,4 +1,4 @@
-import { Code, Camera, Facebook } from "lucide-react";
+import { Code, Facebook } from "lucide-react";
 import ProjectCard from "@/components/ProjectCard";
 
 export default function ProjectsSection() {

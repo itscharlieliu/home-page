@@ -7,7 +7,7 @@ interface ProjectCardProps {
   icon: LucideIcon;
   iconColor: string;
   bgGradient: string;
-  links: [{ url: string; label: string }];
+  links: { url: string; label: string }[];
 }
 
 export default function ProjectCard({
