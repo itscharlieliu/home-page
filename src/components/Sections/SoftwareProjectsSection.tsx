@@ -1,10 +1,9 @@
-import { Code, Facebook } from "lucide-react";
 import ProjectCard from "@/components/ProjectCard";
 
-export default function ProjectsSection() {
+export default function SoftwareProjectsSection() {
   return (
     <section
-      id="projects"
+      id="software-projects"
       className="py-20 px-6 bg-white/50 dark:bg-slate-800/50"
     >
       <div className="max-w-7xl mx-auto">
@@ -22,9 +21,7 @@ export default function ProjectsSection() {
             title="Budger: Budgeting Platform"
             description="A full-stack budgeting solution built with React, featuring modern UI/UX design and seamless transaction tracking."
             technologies={["React.js", "TypeScript"]}
-            icon={Code}
-            iconColor="text-blue-600 dark:text-blue-400"
-            bgGradient="bg-gradient-to-br from-blue-100 to-purple-100 dark:from-blue-900/20 dark:to-purple-900/20"
+            imageUrl="https://u1x4bwhsclfx2wlj.public.blob.vercel-storage.com/banners/budger.png"
             links={[
               {
                 url: "https://itscharlieliu.github.io/budger/#/budget",
@@ -40,9 +37,7 @@ export default function ProjectsSection() {
             title="Facebook Marketplace"
             description="Developed multiple Facebook marketplace features, including showing the sharesheet when taking a screenshot, and GenAI Vehicle Insights"
             technologies={["React Native", "Hack"]}
-            icon={Facebook}
-            iconColor="text-green-600 dark:text-green-400"
-            bgGradient="bg-gradient-to-br from-green-100 to-blue-100 dark:from-green-900/20 dark:to-blue-900/20"
+            imageUrl="https://u1x4bwhsclfx2wlj.public.blob.vercel-storage.com/banners/facebook-marketplace.png"
             links={[
               {
                 url: "https://www.facebook.com/marketplace/",

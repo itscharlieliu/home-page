@@ -13,11 +13,11 @@ export default function HeroSection() {
             <div className="space-y-4">
               <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
                 <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
-                  Creative
+                  Full-Stack
                 </span>
                 <br />
                 <span className="text-slate-800 dark:text-slate-200">
-                  Developer
+                  Creative
                 </span>
               </h1>
               <p className="text-xl text-slate-600 dark:text-slate-400 leading-relaxed max-w-lg">
@@ -41,9 +41,9 @@ export default function HeroSection() {
                   size={20}
                 />
               </button>
-              <button className="border-2 border-slate-300 dark:border-slate-600 text-slate-700 dark:text-slate-300 px-8 py-4 rounded-full font-semibold hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+              {/* <button className="border-2 border-slate-300 dark:border-slate-600 text-slate-700 dark:text-slate-300 px-8 py-4 rounded-full font-semibold hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
                 Download CV
-              </button>
+              </button> */}
             </div>
 
             <div className="flex space-x-6">

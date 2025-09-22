@@ -28,7 +28,7 @@ export default function UpcomingProjectsSection() {
           <UpcomingProjectCard
             title="Photography Course"
             description="An interactive online course teaching photography fundamentals and advanced techniques."
-            timeline="Q2 2024"
+            timeline="Q1 2026"
             status="Planning Phase"
             icon={Camera}
             iconGradient="bg-gradient-to-r from-purple-500 to-pink-500"

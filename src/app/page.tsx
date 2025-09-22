@@ -2,7 +2,8 @@ import Navigation from "@/components/Navigation";
 import HeroSection from "@/components/Sections/HeroSection";
 import AboutSection from "@/components/Sections/AboutSection";
 import PhotographySection from "@/components/Sections/PhotographySection";
-import ProjectsSection from "@/components/Sections/ProjectsSection";
+import SoftwareProjectsSection from "@/components/Sections/SoftwareProjectsSection";
+import PhysicalProjectsSection from "@/components/Sections/PhysicalProjectsSection";
 import UpcomingProjectsSection from "@/components/Sections/UpcomingProjectsSection";
 import ContactSection from "@/components/Sections/ContactSection";
 import Footer from "@/components/Footer";
@@ -14,7 +15,8 @@ export default function Home() {
       <HeroSection />
       <AboutSection />
       <PhotographySection />
-      <ProjectsSection />
+      <SoftwareProjectsSection />
+      <PhysicalProjectsSection />
       <UpcomingProjectsSection />
       <ContactSection />
       <Footer />
