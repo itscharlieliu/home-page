@@ -40,18 +40,24 @@ export default function HeroSection() {
             <div className="flex space-x-6">
               <a
                 href={GITHUB_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-slate-400 hover:text-blue-600 transition-colors"
               >
                 <Github size={24} />
               </a>
               <a
                 href={LINKEDIN_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-slate-400 hover:text-blue-600 transition-colors"
               >
                 <Linkedin size={24} />
               </a>
               <a
                 href={EMAIL_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-slate-400 hover:text-blue-600 transition-colors"
               >
                 <Mail size={24} />
