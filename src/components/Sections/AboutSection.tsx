@@ -17,11 +17,12 @@ export default function AboutSection() {
       <div className="about-grid">
         <div className="about-prose reveal">
           <p>
-            I&apos;m a <strong>product-minded engineer</strong>. I like
-            ambiguous problems where the spec is half-written and the right
-            answer is something between a design call, a systems decision, and a
-            data question. I&apos;d rather ship a small, correct thing this week
-            than the perfect thing next quarter.
+            I&apos;m a <strong>product-minded engineer</strong> with 6+ years
+            at Meta, Dropbox, and Promenade. I&apos;ve shipped AI product
+            launches, run hundreds of experiments, and owned platform
+            infrastructure that handles tens of millions of requests per
+            second. The through-line is the same: move a real metric, reliably,
+            at scale.
           </p>
           <p>
             I read dashboards before standup. I write the rollout plan before
@@ -31,14 +32,14 @@ export default function AboutSection() {
             </strong>
             , not a thing data scientists do at the end. The work I&apos;m
             proudest of is almost always cross-functional — it shipped because
-            someone made the PM, design, and data conversations easier, not
-            harder.
+            someone made the PM, design, data science, and legal conversations
+            easier, not harder.
           </p>
           <p>
             I care about craft — the tests pass, the latency budget is
             respected, the on-call runbook actually runs — but I have no
-            patience for craft-as-aesthetic. The bar is whether the thing works,
-            for real users, at the scale it claims to.
+            patience for craft-as-aesthetic. The bar is whether the thing
+            works, for real users, at the scale it claims to.
           </p>
         </div>
 
@@ -49,32 +50,32 @@ export default function AboutSection() {
           <div className="group">
             <div className="k">Strengths</div>
             <div className="v">
-              Product engineering, backend &amp; platform systems,
-              experimentation &amp; growth, AI product features, reliability
-              &amp; eng. quality, cross-functional execution.
+              Consumer product engineering, experimentation &amp; growth, AI
+              product features, platform &amp; infra systems, reliability,
+              cross-functional execution.
             </div>
           </div>
           <div className="group">
             <div className="k">Languages</div>
             <div className="v">
-              TypeScript, Python, Go, Rust, C++ <em>(read)</em>.
+              TypeScript, JavaScript, Python, Go, Hack/PHP, C++
             </div>
           </div>
           <div className="group">
-            <div className="k">Stack</div>
+            <div className="k">Frontend</div>
             <div className="v">
-              React, Node, GraphQL, Postgres, Kafka, Spark, Kubernetes.
+              React, React Native, Relay, GraphQL, Redux, Swift
             </div>
           </div>
           <div className="group">
-            <div className="k">Comfortable with</div>
+            <div className="k">Backend</div>
             <div className="v">
-              LLM eval pipelines, online + sequential A/B testing, SLO
-              programs, profiling &amp; perf work, large-codebase refactors.
+              gRPC, REST, feature flags, experimentation systems, AWS, Docker,
+              CI/CD, Django
             </div>
           </div>
           <div className="group">
-            <div className="k">Currently learning</div>
+            <div className="k">Currently</div>
             <div className="v">
               Local-first runtimes, structured eval harnesses for agentic
               systems.

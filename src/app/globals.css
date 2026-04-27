@@ -383,23 +383,12 @@ h1.hero-title .tag .accent::after {
   align-items: stretch;
   padding: 26px 0;
   border-bottom: 1px solid var(--line);
-  cursor: pointer;
+  cursor: default;
   position: relative;
   transition: background .3s ease;
 }
 .row:first-child { border-top: 1px solid var(--line); }
 .row:hover { background: linear-gradient(to right, transparent, oklch(1 0 0 / 0.012) 30%, transparent); }
-.row::before {
-  content: "";
-  position: absolute;
-  left: 0; top: 0; bottom: 0;
-  width: 2px;
-  background: var(--accent);
-  transform: scaleY(0);
-  transform-origin: top;
-  transition: transform .35s cubic-bezier(.2,.7,.2,1);
-}
-.row:hover::before { transform: scaleY(1); }
 
 .row .yr {
   font-family: var(--font-geist-mono), monospace;
@@ -594,6 +583,14 @@ h1.hero-title .tag .accent::after {
   font-family: var(--font-geist-mono), monospace;
   font-size: 11px;
   color: var(--fg-2);
+  gap: 8px;
+  min-width: 0;
+}
+.proj .proj-foot span:first-child {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  min-width: 0;
 }
 .proj .proj-foot .arr { transition: color .25s ease, transform .25s ease; display: inline-block; }
 .proj:hover .proj-foot .arr { color: var(--accent); transform: translateX(2px); }

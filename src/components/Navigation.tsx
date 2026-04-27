@@ -36,7 +36,7 @@ export default function Navigation() {
         </div>
         <span className="status">
           <span className="dot" />
-          Open to staff IC roles
+          Open to senior IC roles
         </span>
       </div>
     </nav>

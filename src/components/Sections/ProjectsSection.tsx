@@ -15,59 +15,74 @@ export default function ProjectsSection() {
       </div>
 
       <div className="proj-grid reveal">
-        <a className="proj" href="#">
+        <a
+          className="proj"
+          href="https://github.com/itscharlieliu/workouts"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <div className="proj-head">
-            <span className="proj-tag">PROJECT · [LANG]</span>
+            <span className="proj-tag">APP · TS / REACT</span>
             <span className="proj-status">
               <span className="pdot" />
               Active
             </span>
           </div>
-          <h3>[Project name]</h3>
+          <h3>Workouts</h3>
           <p>
-            [Short description of what it does and why you built it. One or two
-            sentences.]
+            Full-stack workout planning and logging app with reusable templates,
+            history tracking, CSV import/export, and SQLite-backed persistence.
           </p>
           <div className="proj-foot">
-            <span>github.com/itscharlieliu/[repo]</span>
+            <span>github.com/itscharlieliu/workouts</span>
             <span className="arr">→</span>
           </div>
         </a>
 
-        <a className="proj" href="#">
+        <a
+          className="proj"
+          href="https://apps.apple.com/us/app/whereabout-location-log/id6760775197"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <div className="proj-head">
-            <span className="proj-tag">PROJECT · [LANG]</span>
+            <span className="proj-tag">IOS · SWIFT</span>
             <span className="proj-status">
               <span className="pdot" />
               Active
             </span>
           </div>
-          <h3>[Project name]</h3>
+          <h3>Whereabout</h3>
           <p>
-            [Short description of what it does and why you built it. One or two
-            sentences.]
+            Swift iOS app for location tracking, route visualization, and trip
+            export/import. Built for personal use and shared openly.
           </p>
           <div className="proj-foot">
-            <span>github.com/itscharlieliu/[repo]</span>
+            <span>App store link</span>
             <span className="arr">→</span>
           </div>
         </a>
 
-        <a className="proj" href="#">
+        <a
+          className="proj"
+          href="https://github.com/dmarcotte/easy-move-resize"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <div className="proj-head">
-            <span className="proj-tag">WRITING</span>
-            <span className="proj-status archived">
+            <span className="proj-tag">OPEN SOURCE · SWIFT</span>
+            <span className="proj-status">
               <span className="pdot" />
-              Notes
+              Contributor
             </span>
           </div>
-          <h3>Field notes</h3>
+          <h3>Easy Move + Resize</h3>
           <p>
-            Occasional, narrowly-scoped writing on experimentation, AI product
-            surfaces, and the unglamorous parts of shipping at scale.
+            macOS utility enabling Linux-style window dragging and resizing from
+            anywhere on the window. Open-source collaborator.
           </p>
           <div className="proj-foot">
-            <span>charlieliu.dev/notes</span>
+            <span>https://github.com/dmarcotte/easy-move-resize</span>
             <span className="arr">→</span>
           </div>
         </a>

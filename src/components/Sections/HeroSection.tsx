@@ -8,7 +8,7 @@ export default function HeroSection() {
           <div className="hero-meta reveal">
             <span>Seattle, WA</span>
             <span className="sep">·</span>
-            <span>[Currently @ Company — Team]</span>
+            <span>[Currently @ Meta — Facebook Marketplace]</span>
           </div>
 
           <h1 className="hero-title">
@@ -85,25 +85,24 @@ export default function HeroSection() {
       >
         <div className="stat">
           <div className="label">Years shipping</div>
-          <div className="value" data-count="10">
+          <div className="value" data-count="6">
             <span className="counter">0</span>
             <span className="unit">+</span>
           </div>
         </div>
         <div className="stat">
-          <div className="label">Experiments run</div>
-          <div className="value" data-count="180">
+          <div className="label">Experiments shipped</div>
+          <div className="value" data-count="200">
             <span className="counter">0</span>
             <span className="unit">+</span>
           </div>
         </div>
         <div className="stat">
-          <div className="label">Daily users touched</div>
-          <div className="value">
-            <span data-count="1.1" data-decimals="1">
-              0.0
-            </span>
-            <span className="unit">B</span>
+          <div className="label">Annualized rev. impact</div>
+          <div className="value" data-count="7">
+            <span style={{ color: "var(--fg-2)", fontSize: "18px" }}>$</span>
+            <span className="counter">0</span>
+            <span className="unit">M+</span>
           </div>
         </div>
         <div className="stat">
