@@ -112,10 +112,10 @@ export default function HeroSection() {
           </div>
         </div>
         <div className="stat">
-          <div className="label">Avg. on-call P0s</div>
-          <div className="value" data-count="0">
-            <span className="counter">0</span>
-            <span className="unit"> / qtr</span>
+          <div className="label">Daily active users impacted</div>
+          <div className="value" data-count="150">
+            <span className="counter">150</span>
+            <span className="unit">M+</span>
           </div>
         </div>
       </div>
