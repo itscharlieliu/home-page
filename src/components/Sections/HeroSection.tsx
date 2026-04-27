@@ -46,9 +46,15 @@ export default function HeroSection() {
               <span>View work</span>
               <span className="arrow">→</span>
             </a>
-            <a className="btn ghost" href="#contact">
-              <span>Resume / Contact</span>
-              <span className="arrow">↗</span>
+            <a
+              className="btn ghost"
+              href="https://u1x4bwhsclfx2wlj.public.blob.vercel-storage.com/docs/Charlie_Liu_Resume%20%283%29.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              download
+            >
+              <span>Download résumé</span>
+              <span className="arrow">↓</span>
             </a>
           </div>
         </div>

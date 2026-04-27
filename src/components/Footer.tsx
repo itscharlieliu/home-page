@@ -1,5 +1,5 @@
 export default function Footer() {
-  const date = new Date().toLocaleDateString("en-US", {
+  const date = new Date(process.env.BUILD_DATE!).toLocaleDateString("en-US", {
     year: "numeric",
     month: "short",
     day: "2-digit",
@@ -7,7 +7,7 @@ export default function Footer() {
 
   return (
     <footer className="foot">
-      <div>charlieliu.dev — index</div>
+      <div>itscharlieliu.com — index</div>
       <div className="center">Next.js · deployed on Vercel</div>
       <div className="right">Last deploy {date}</div>
     </footer>

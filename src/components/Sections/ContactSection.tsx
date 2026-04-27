@@ -42,7 +42,7 @@ export default function ContactSection() {
             onClick={handleEmailClick}
           >
             <span>{EMAIL}</span>
-            <span className="arrow">↗</span>
+            <span className="arrow">→</span>
             <span
               className="copy-hint"
               style={copyAccent ? { color: "var(--accent)" } : undefined}
@@ -75,8 +75,19 @@ export default function ContactSection() {
             <span className="lhandle">@charlieliuphoto</span>
             <span className="larr">↗</span>
           </a>
-          <a href={`mailto:${EMAIL}`}>
+          <a
+            href="https://u1x4bwhsclfx2wlj.public.blob.vercel-storage.com/docs/Charlie_Liu_Resume%20%283%29.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            download
+          >
             <span className="lnum">/04</span>
+            <span>Résumé</span>
+            <span className="lhandle">PDF · 2026</span>
+            <span className="larr">↓</span>
+          </a>
+          <a href={`mailto:${EMAIL}`}>
+            <span className="lnum">/05</span>
             <span>Email</span>
             <span className="lhandle">{EMAIL}</span>
             <span className="larr">↗</span>

@@ -629,6 +629,12 @@ h1.hero-title .tag .accent::after {
   transition: border-color .25s ease, color .25s ease;
 }
 .contact .email-link:hover { border-color: var(--accent); }
+.contact .email-link .arrow {
+  display: inline-block;
+  transform: rotate(-45deg);
+  font-size: 15px;
+  line-height: 1;
+}
 .contact .email-link .copy-hint {
   font-family: var(--font-geist-mono), monospace;
   font-size: 11px;
@@ -660,7 +666,7 @@ h1.hero-title .tag .accent::after {
 /* ── Footer ── */
 footer.foot {
   border-top: 1px solid var(--line);
-  padding: 24px var(--gutter);
+  padding: 24px var(--gutter) 52px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 16px;
