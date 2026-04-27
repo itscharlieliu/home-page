@@ -5,16 +5,18 @@ import "./globals.css";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+  weight: ["300", "400", "500", "600"],
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+  weight: ["400", "500"],
 });
 
 export const metadata: Metadata = {
-  title: "Charlie Liu's Portfolio",
-  description: "Creative developer, photographer, and digital innovator",
+  title: "Charlie Liu — Senior Software Engineer",
+  description: "Senior software engineer building consumer products at scale.",
 };
 
 export default function RootLayout({
@@ -24,9 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${geistSans.variable} ${geistMono.variable}`}>
         {children}
       </body>
     </html>

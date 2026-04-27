@@ -1,103 +1,116 @@
-"use client";
-
-import { EMAIL_URL, GITHUB_URL, LINKEDIN_URL, INSTAGRAM } from "@/common/links";
-import { ArrowRight, Github, Linkedin, Mail, Instagram } from "lucide-react";
 import Image from "next/image";
 
 export default function HeroSection() {
   return (
-    <section className="pt-32 pb-20 px-6">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-8">
-            <div className="space-y-4">
-              <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
-                <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
-                  Full-Stack
-                </span>
-                <br />
-                <span className="text-slate-800 dark:text-slate-200">
-                  Creative
-                </span>
-              </h1>
-              <p className="text-xl text-slate-600 dark:text-slate-400 leading-relaxed max-w-lg">
-                I craft digital experiences through code, capture moments
-                through photography, and bring innovative ideas to life.
-              </p>
-            </div>
-
-            <div className="flex flex-col sm:flex-row gap-4">
-              <button
-                onClick={() => {
-                  document.getElementById("photography")?.scrollIntoView({
-                    behavior: "smooth",
-                  });
-                }}
-                className="group bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-full font-semibold hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300 flex items-center justify-center"
-              >
-                View My Work
-                <ArrowRight
-                  className="ml-2 group-hover:translate-x-1 transition-transform"
-                  size={20}
-                />
-              </button>
-              {/* <button className="border-2 border-slate-300 dark:border-slate-600 text-slate-700 dark:text-slate-300 px-8 py-4 rounded-full font-semibold hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
-                Download CV
-              </button> */}
-            </div>
-
-            <div className="flex space-x-6">
-              <a
-                href={INSTAGRAM}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-slate-400 hover:text-pink-600 transition-colors"
-              >
-                <Instagram size={24} />
-              </a>
-              <a
-                href={GITHUB_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-slate-400 hover:text-blue-600 transition-colors"
-              >
-                <Github size={24} />
-              </a>
-              <a
-                href={LINKEDIN_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-slate-400 hover:text-blue-600 transition-colors"
-              >
-                <Linkedin size={24} />
-              </a>
-              <a
-                href={EMAIL_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-slate-400 hover:text-blue-600 transition-colors"
-              >
-                <Mail size={24} />
-              </a>
-            </div>
+    <section className="shell hero">
+      <div className="hero-grid">
+        <div>
+          <div className="hero-meta reveal">
+            <span>Seattle, WA</span>
+            <span className="sep">·</span>
+            <span>[Currently @ Company — Team]</span>
           </div>
 
-          <div className="relative">
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-500 rounded-3xl transform rotate-6"></div>
-            <div className="relative bg-white dark:bg-slate-800 rounded-3xl p-8 shadow-2xl">
-              <div className="aspect-square bg-gradient-to-br from-blue-100 to-purple-100 dark:from-blue-900/20 dark:to-purple-900/20 rounded-2xl flex items-center justify-center">
-                <Image
-                  src="https://u1x4bwhsclfx2wlj.public.blob.vercel-storage.com/DSC05054-2.jpg"
-                  alt="Profile image"
-                  width={400}
-                  height={400}
-                  className="w-full h-full object-cover rounded-2xl"
-                  priority
-                  placeholder="blur"
-                  blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
-                />
+          <h1 className="hero-title">
+            <span
+              className="name reveal"
+              style={{ "--rd": "60ms" } as React.CSSProperties}
+            >
+              Charlie Liu.
+            </span>
+            <span
+              className="tag reveal"
+              style={{ "--rd": "160ms" } as React.CSSProperties}
+            >
+              Senior software engineer
+              <br />
+              building <span className="accent">consumer products</span> at
+              scale.
+            </span>
+          </h1>
+
+          <p
+            className="hero-lede reveal"
+            style={{ "--rd": "280ms" } as React.CSSProperties}
+          >
+            I work on AI-powered features, experimentation, and the platform
+            systems underneath them. Years shipping product software that has to
+            be both measurable and reliable.
+          </p>
+
+          <div
+            className="hero-ctas reveal"
+            style={{ "--rd": "380ms" } as React.CSSProperties}
+          >
+            <a className="btn primary" href="#work">
+              <span>View work</span>
+              <span className="arrow">→</span>
+            </a>
+            <a className="btn ghost" href="#contact">
+              <span>Resume / Contact</span>
+              <span className="arrow">↗</span>
+            </a>
+          </div>
+        </div>
+
+        <aside
+          className="hero-side reveal"
+          style={{ "--rd": "200ms" } as React.CSSProperties}
+        >
+          <div className="photo-frame">
+            <span className="photo-label">PORTRAIT · 4:5</span>
+            <Image
+              src="https://u1x4bwhsclfx2wlj.public.blob.vercel-storage.com/DSC05054-2.jpg"
+              alt="Charlie Liu"
+              fill
+              style={{ objectFit: "cover" }}
+              priority
+              placeholder="blur"
+              blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
+            />
+            <div className="photo-meta">
+              <div>
+                <b>Charlie Liu</b>
+                SEA · 2026
               </div>
+              <div>F/2.8 · 50mm</div>
             </div>
+          </div>
+        </aside>
+      </div>
+
+      <div
+        className="hero-stats reveal"
+        style={{ "--rd": "520ms" } as React.CSSProperties}
+      >
+        <div className="stat">
+          <div className="label">Years shipping</div>
+          <div className="value" data-count="10">
+            <span className="counter">0</span>
+            <span className="unit">+</span>
+          </div>
+        </div>
+        <div className="stat">
+          <div className="label">Experiments run</div>
+          <div className="value" data-count="180">
+            <span className="counter">0</span>
+            <span className="unit">+</span>
+          </div>
+        </div>
+        <div className="stat">
+          <div className="label">Daily users touched</div>
+          <div className="value">
+            <span data-count="1.1" data-decimals="1">
+              0.0
+            </span>
+            <span className="unit">B</span>
+          </div>
+        </div>
+        <div className="stat">
+          <div className="label">Avg. on-call P0s</div>
+          <div className="value" data-count="0">
+            <span className="counter">0</span>
+            <span className="unit"> / qtr</span>
           </div>
         </div>
       </div>
