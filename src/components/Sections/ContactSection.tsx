@@ -1,6 +1,11 @@
 "use client";
 import { useState } from "react";
-import { GITHUB_URL, LINKEDIN_URL, INSTAGRAM } from "@/common/links";
+import {
+  GITHUB_URL,
+  LINKEDIN_URL,
+  INSTAGRAM,
+  RESUME_URL,
+} from "@/common/links";
 
 const EMAIL = "info@itscharlieliu.com";
 
@@ -76,7 +81,7 @@ export default function ContactSection() {
             <span className="larr">↗</span>
           </a>
           <a
-            href="https://u1x4bwhsclfx2wlj.public.blob.vercel-storage.com/docs/Charlie_Liu_Resume%20%283%29.pdf"
+            href={RESUME_URL}
             target="_blank"
             rel="noopener noreferrer"
             download

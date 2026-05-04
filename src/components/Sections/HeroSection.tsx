@@ -1,3 +1,4 @@
+import { RESUME_URL } from "@/common/links";
 import Image from "next/image";
 
 export default function HeroSection() {
@@ -48,7 +49,7 @@ export default function HeroSection() {
             </a>
             <a
               className="btn ghost"
-              href="https://u1x4bwhsclfx2wlj.public.blob.vercel-storage.com/docs/Charlie_Liu_Resume%20%283%29.pdf"
+              href={RESUME_URL}
               target="_blank"
               rel="noopener noreferrer"
               download
