@@ -70,7 +70,7 @@ export default function ProjectsSection() {
           rel="noopener noreferrer"
         >
           <div className="proj-head">
-            <span className="proj-tag">OPEN SOURCE · SWIFT</span>
+            <span className="proj-tag">OPEN SOURCE · Objective C</span>
             <span className="proj-status">
               <span className="pdot" />
               Contributor
