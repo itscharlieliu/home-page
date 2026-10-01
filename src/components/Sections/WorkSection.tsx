@@ -6,11 +6,11 @@ export default function WorkSection() {
           <span className="section-label">
             <span className="section-num">01</span> Selected work
           </span>
-          <h2>Things I&apos;ve shipped that moved a number.</h2>
+          <h2>Where I&apos;ve worked.</h2>
         </div>
         <div className="right">
-          A curated subset, ordered most recent first. Roles span product
-          engineering, platform, and experimentation infra.
+          Most recent first. Product engineering, platform work, and
+          experimentation infrastructure.
         </div>
       </div>
 
@@ -25,12 +25,12 @@ export default function WorkSection() {
               <span className="surface">— Facebook Marketplace</span>
             </h3>
             <p className="impact">
-              Led Marketplace&apos;s first generative AI launches on listing
-              detail pages — Product Insights and Vehicle Insights — reaching
-              39.4% adoption and 51.9% 14-day retention. Drove 300K+ incremental
-              daily sessions and ~$7M annualized revenue impact across 200+
-              experiments. Launched Screenshot to Share, scaling to ~1.5M daily
-              uses.
+              Led the first generative AI features on Marketplace listing pages
+              (Product Insights and Vehicle Insights), which reached 39.4%
+              adoption and 51.9% 14-day retention. Ran 200+ experiments that
+              together added 300K+ daily sessions and about $7M in annualized
+              revenue. Also launched Screenshot to Share, which grew to about
+              1.5M uses a day.
             </p>
             <div className="meta-tags">
               <span className="tag">typescript</span>
@@ -56,11 +56,11 @@ export default function WorkSection() {
               <span className="surface">— Experimentation Platform</span>
             </h3>
             <p className="impact">
-              Owned core feature-flagging and rollout infrastructure handling
-              40M requests per second across a large portion of Dropbox&apos;s
-              product surface. Led migration from REST to gRPC. Authored the
-              experiment-expiration system that reduced high-severity incidents
-              by 50%, and a new creation workflow cutting setup time by 30%.
+              Owned the feature-flag and rollout service, which handled 40M
+              requests per second across a large part of Dropbox. Led the move
+              from REST to gRPC. Built a system to expire old experiments, which
+              cut high-severity incidents in half, and a new experiment setup
+              flow that made setup 30% faster.
             </p>
             <div className="meta-tags">
               <span className="tag">go</span>
@@ -85,9 +85,9 @@ export default function WorkSection() {
               <span className="surface">— Platform &amp; Devices</span>
             </h3>
             <p className="impact">
-              Built full-stack and embedded software for connected-device and
-              Class II medical-device products. Owned deployment pipelines and
-              backend integrations for OTA updates and data workflows across
+              Built full-stack and embedded software for connected devices,
+              including Class II medical devices. Owned the deployment pipeline
+              and the backend for over-the-air updates and device data, using
               AWS, Django, S3, DynamoDB, Docker, and Yocto.
             </p>
             <div className="meta-tags">
@@ -110,7 +110,7 @@ export default function WorkSection() {
         className="mono"
         style={{ color: "var(--fg-3)", fontSize: "12px", margin: "0 0 8px" }}
       >
-        ↳ Full history and shipped work available on request.
+        ↳ More detail in my résumé, or just ask.
       </p>
     </section>
   );

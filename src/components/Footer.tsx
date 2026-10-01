@@ -7,7 +7,7 @@ export default function Footer() {
 
   return (
     <footer className="foot">
-      <div>itscharlieliu.com — index</div>
+      <div>itscharlieliu.com</div>
       <div className="center">Next.js · deployed on Vercel</div>
       <div className="right">Last deploy {date}</div>
     </footer>

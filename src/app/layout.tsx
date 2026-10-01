@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Charlie Liu — Senior Software Engineer",
-  description: "Senior software engineer building consumer products at scale.",
+  description: "Charlie Liu is a senior software engineer at Meta working on Facebook Marketplace.",
 };
 
 export default function RootLayout({

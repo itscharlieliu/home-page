@@ -9,7 +9,7 @@ export default function HeroSection() {
           <div className="hero-meta reveal">
             <span>Seattle, WA</span>
             <span className="sep">·</span>
-            <span>[Currently @ Meta — Facebook Marketplace]</span>
+            <span>Currently at Meta, on Facebook Marketplace</span>
           </div>
 
           <h1 className="hero-title">
@@ -25,8 +25,7 @@ export default function HeroSection() {
             >
               Senior software engineer
               <br />
-              building <span className="accent">consumer products</span> at
-              scale.
+              who builds <span className="accent">consumer products</span>.
             </span>
           </h1>
 
@@ -34,9 +33,9 @@ export default function HeroSection() {
             className="hero-lede reveal"
             style={{ "--rd": "280ms" } as React.CSSProperties}
           >
-            I work on AI-powered features, experimentation, and the platform
-            systems underneath them. Years shipping product software that has to
-            be both measurable and reliable.
+            Right now I work on AI features and A/B tests for Facebook
+            Marketplace. Before that I ran the feature-flag service at Dropbox,
+            and before that I wrote software for medical devices.
           </p>
 
           <div
@@ -65,7 +64,6 @@ export default function HeroSection() {
           style={{ "--rd": "200ms" } as React.CSSProperties}
         >
           <div className="photo-frame">
-            <span className="photo-label">PORTRAIT · 4:5</span>
             <Image
               src="https://u1x4bwhsclfx2wlj.public.blob.vercel-storage.com/DSC05054-2.jpg"
               alt="Charlie Liu"

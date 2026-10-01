@@ -9,37 +9,33 @@ export default function AboutSection() {
           <h2>How I work.</h2>
         </div>
         <div className="right">
-          Short version: I treat code, product, and metrics as one system, and
-          I default to clarity.
+          A bit more than what fits on a résumé.
         </div>
       </div>
 
       <div className="about-grid">
         <div className="about-prose reveal">
           <p>
-            I&apos;m a <strong>product-minded engineer</strong> with 6+ years
-            at Meta, Dropbox, and Promenade. I&apos;ve shipped AI product
-            launches, run hundreds of experiments, and owned platform
-            infrastructure that handles tens of millions of requests per
-            second. The through-line is the same: move a real metric, reliably,
-            at scale.
+            I&apos;ve been a software engineer for about six years, at Meta,
+            Dropbox, and Promenade. At Meta I led the first generative AI
+            features on Marketplace listings. At Dropbox I owned the
+            feature-flag service, which handled around 40 million requests per
+            second. Promenade was a small company, so I did a bit of
+            everything there, including embedded work on medical devices.
           </p>
           <p>
-            I read dashboards before standup. I write the rollout plan before
-            the diff. I treat{" "}
-            <strong>
-              experimentation as a first-class part of engineering
-            </strong>
-            , not a thing data scientists do at the end. The work I&apos;m
-            proudest of is almost always cross-functional — it shipped because
-            someone made the PM, design, data science, and legal conversations
-            easier, not harder.
+            Most of my work has involved <strong>A/B testing</strong> in some
+            way. I like to plan the experiment and the rollout while I&apos;m
+            still writing the code, so everyone agrees on what we&apos;re
+            measuring before launch. My favorite projects have usually needed a
+            lot of back-and-forth with PMs, designers, data scientists, and
+            sometimes legal, and I&apos;m comfortable being the engineer who
+            keeps that moving.
           </p>
           <p>
-            I care about craft — the tests pass, the latency budget is
-            respected, the on-call runbook actually runs — but I have no
-            patience for craft-as-aesthetic. The bar is whether the thing
-            works, for real users, at the scale it claims to.
+            I also care about the less visible parts of the job: good tests,
+            keeping latency down, and on-call docs that someone else can
+            actually follow.
           </p>
         </div>
 
@@ -50,9 +46,8 @@ export default function AboutSection() {
           <div className="group">
             <div className="k">Strengths</div>
             <div className="v">
-              Consumer product engineering, experimentation &amp; growth, AI
-              product features, platform &amp; infra systems, reliability,
-              cross-functional execution.
+              Consumer product work, A/B testing, AI features, backend
+              platforms, reliability, working across teams.
             </div>
           </div>
           <div className="group">
@@ -77,8 +72,7 @@ export default function AboutSection() {
           <div className="group">
             <div className="k">Currently</div>
             <div className="v">
-              Local-first runtimes, structured eval harnesses for agentic
-              systems.
+              Local-first apps, and better ways to test LLM agents.
             </div>
           </div>
         </div>

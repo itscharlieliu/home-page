@@ -7,10 +7,10 @@ export default function ProjectsSection() {
             <span className="section-num">03</span> Open source &amp; side
             projects
           </span>
-          <h2>Things I build outside of work.</h2>
+          <h2>Side projects.</h2>
         </div>
         <div className="right">
-          Small, opinionated, and almost always shipped. A subset.
+          Apps I made for myself, plus an open-source tool I contribute to.
         </div>
       </div>
 
@@ -30,8 +30,9 @@ export default function ProjectsSection() {
           </div>
           <h3>Workouts</h3>
           <p>
-            Full-stack workout planning and logging app with reusable templates,
-            history tracking, CSV import/export, and SQLite-backed persistence.
+            A full-stack app for planning and logging workouts. It has reusable
+            templates, workout history, and CSV import/export, and stores
+            everything in SQLite.
           </p>
           <div className="proj-foot">
             <span>github.com/itscharlieliu/workouts</span>
@@ -54,11 +55,12 @@ export default function ProjectsSection() {
           </div>
           <h3>Whereabout</h3>
           <p>
-            Swift iOS app for location tracking, route visualization, and trip
-            export/import. Built for personal use and shared openly.
+            An iOS app that logs where you&apos;ve been, draws your routes on a
+            map, and lets you export and import trips. I built it for myself
+            and put it on the App Store.
           </p>
           <div className="proj-foot">
-            <span>App store link</span>
+            <span>App Store</span>
             <span className="arr">→</span>
           </div>
         </a>
@@ -78,11 +80,11 @@ export default function ProjectsSection() {
           </div>
           <h3>Easy Move + Resize</h3>
           <p>
-            macOS utility enabling Linux-style window dragging and resizing from
-            anywhere on the window. Open-source collaborator.
+            A macOS utility that lets you move and resize a window by grabbing
+            it anywhere, the way you can on Linux. I contribute to it.
           </p>
           <div className="proj-foot">
-            <span>https://github.com/dmarcotte/easy-move-resize</span>
+            <span>github.com/dmarcotte/easy-move-resize</span>
             <span className="arr">→</span>
           </div>
         </a>

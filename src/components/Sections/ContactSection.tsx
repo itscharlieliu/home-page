@@ -39,7 +39,7 @@ export default function ContactSection() {
             <span className="section-num">04</span> Get in touch
           </span>
           <h2>
-            Hiring for something <em>serious?</em> Let&apos;s talk.
+            Want to <em>work together?</em> Send me an email.
           </h2>
           <a
             className="email-link"
